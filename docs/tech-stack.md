@@ -131,45 +131,29 @@
    }
    ```
 
-3. **TypeScript Strict Mode**
-
-   ```javascript
-   // tsconfig.json strict checks
-   {
-     "compilerOptions": {
-       "strict": true,
-       "noImplicitAny": true,
-       "strictNullChecks": true,
-       "strictFunctionTypes": true,
-       "noUnusedLocals": true,
-       "noUnusedParameters": true
-     }
-   }
-   ```
-
-4. **Pre-commit Hooks** (using husky)
+3. **Available Commands**
 
    ```bash
-   # .husky/pre-commit
-   #!/bin/sh
-   . "$(dirname "$0")/_/husky.sh"
+   # Run Next.js linting
+   npm run lint
 
-   npm run lint-staged
+   # Format all files with Prettier
+   npm run format
+
+   # Run ESLint fix and Prettier
+   npm run lint:fix
+
+   # Automatically runs on staged files before commit
+   # (via husky and lint-staged)
    ```
 
-   ```javascript
-   // package.json
-   {
-     "lint-staged": {
-       "*.{ts,tsx}": [
-         "eslint --fix",
-         "prettier --write"
-       ]
-     }
-   }
-   ```
+4. **Automated Checks**
 
-5. **VS Code Settings**'
+   - On file save in VS Code (ESLint + Prettier)
+   - Pre-commit hooks via Husky
+   - Lint-staged for optimized pre-commit checks
+
+5. **VS Code Integration**
 
    ```javascript
    // .vscode/settings.json
