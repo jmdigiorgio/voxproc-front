@@ -86,35 +86,30 @@
    // .eslintrc.js
    module.exports = {
      extends: [
-       "next/core-web-vitals",
-       "plugin:@typescript-eslint/recommended",
-       "plugin:react-hooks/recommended",
-       "plugin:jsx-a11y/recommended",
-       "prettier"
+       'next/core-web-vitals',
+       'plugin:@typescript-eslint/recommended',
+       'plugin:react-hooks/recommended',
+       'plugin:jsx-a11y/recommended',
+       'prettier',
      ],
-     plugins: [
-       "@typescript-eslint",
-       "jsx-a11y",
-       "react-hooks",
-       "prettier"
-     ],
+     plugins: ['@typescript-eslint', 'jsx-a11y', 'react-hooks', 'prettier'],
      rules: {
        // React specific
-       "react-hooks/rules-of-hooks": "error",
-       "react-hooks/exhaustive-deps": "warn",
-       
+       'react-hooks/rules-of-hooks': 'error',
+       'react-hooks/exhaustive-deps': 'warn',
+
        // TypeScript
-       "@typescript-eslint/no-unused-vars": ["error"],
-       "@typescript-eslint/explicit-function-return-type": ["warn"],
-       
+       '@typescript-eslint/no-unused-vars': ['error'],
+       '@typescript-eslint/explicit-function-return-type': ['warn'],
+
        // Accessibility
-       "jsx-a11y/media-has-caption": "off", // Due to our audio nature
-       
+       'jsx-a11y/media-has-caption': 'off', // Due to our audio nature
+
        // General
-       "no-console": ["warn", { allow: ["warn", "error"] }],
-       "prettier/prettier": "error"
-     }
-   }
+       'no-console': ['warn', { allow: ['warn', 'error'] }],
+       'prettier/prettier': 'error',
+     },
+   };
    ```
 
 2. **Prettier Configuration**
@@ -294,8 +289,8 @@ Closes #123
 
 ```typescript
 // Example component structure
-import { cn } from "@/lib/utils"
-import { Button } from "@/components/ui/button"
+import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button';
 
 interface FeatureProps {
   // Strong typing for props

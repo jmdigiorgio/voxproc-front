@@ -6,15 +6,21 @@ import prettierPlugin from 'eslint-plugin-prettier';
 
 export default [
   {
-    ignores: ['.next/**/*', 'node_modules/**/*', 'dist/**/*', 'build/**/*', 'coverage/**/*']
+    ignores: [
+      '.next/**/*',
+      'node_modules/**/*',
+      'dist/**/*',
+      'build/**/*',
+      'coverage/**/*',
+    ],
   },
   {
     plugins: {
       '@typescript-eslint': typescriptPlugin,
       'react-hooks': reactHooksPlugin,
       'jsx-a11y': jsxA11yPlugin,
-      'prettier': prettierPlugin,
-      '@next/next': nextPlugin
+      prettier: prettierPlugin,
+      '@next/next': nextPlugin,
     },
     rules: {
       '@typescript-eslint/explicit-function-return-type': 'off',
@@ -25,7 +31,7 @@ export default [
       ...reactHooksPlugin.configs.recommended.rules,
       ...jsxA11yPlugin.configs.recommended.rules,
       ...nextPlugin.configs.recommended.rules,
-      ...nextPlugin.configs['core-web-vitals'].rules
-    }
-  }
-] 
+      ...nextPlugin.configs['core-web-vitals'].rules,
+    },
+  },
+];

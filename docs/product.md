@@ -26,6 +26,7 @@ XTelegraph transforms how users consume social media content by converting text-
 ### Proof of Concept
 
 1. **Core Audio Experience** (Desktop Web App)
+
    - Text-to-speech conversion of social media posts
    - Audio translation to multiple languages
    - Background audio playback through browser
@@ -34,6 +35,7 @@ XTelegraph transforms how users consume social media content by converting text-
    - Post queue management
 
 2. **Platform Integration**
+
    - Bluesky integration as first platform
      - AT Protocol integration
      - OAuth-based authentication
@@ -43,6 +45,7 @@ XTelegraph transforms how users consume social media content by converting text-
      - Custom feed support
 
 3. **User Interface**
+
    - Simple, intuitive web-based audio player interface
    - Connected account management
    - Basic feed customization options
@@ -50,6 +53,7 @@ XTelegraph transforms how users consume social media content by converting text-
    - Minimized player mode
 
 4. **Free Tier Implementation**
+
    - Basic audio advertisements
    - Single platform connection (Bluesky)
    - Standard voice option
@@ -96,6 +100,7 @@ XTelegraph transforms how users consume social media content by converting text-
 ### User Engagement
 
 1. **Active Listening**
+
    - Daily Active Users (DAU)
    - Average listening time per session
    - Number of posts consumed via audio per user
@@ -109,6 +114,7 @@ XTelegraph transforms how users consume social media content by converting text-
 ### User Retention
 
 1. **Core Metrics**
+
    - Day 1/7/30 retention rates
    - Weekly active users (WAU)
    - Monthly active users (MAU)
@@ -123,6 +129,7 @@ XTelegraph transforms how users consume social media content by converting text-
 ### Business Performance
 
 1. **Free Tier Metrics**
+
    - User acquisition cost
    - Ad completion rates
    - Ad engagement rates
@@ -147,11 +154,13 @@ XTelegraph transforms how users consume social media content by converting text-
 ### Current Solutions
 
 1. **Social Media Platforms** (X, Threads, Bluesky, Mastodon)
+
    - Strength: Rapid information sharing, real-time updates
    - Weakness: Requires visual attention and context switching
    - Market Position: Primary source of content we're transforming
 
 2. **Audio Platforms** (Spotify, Apple Podcasts, YouTube Music)
+
    - Strength: Perfected background listening experience
    - Strength: Well-established audio controls and user experience
    - Weakness: Content is pre-recorded, not real-time
@@ -177,6 +186,7 @@ XTelegraph transforms how users consume social media content by converting text-
 ### Tiered Pricing Model
 
 1. **Free Tier**
+
    - Access to basic features
    - Audio advertisements between content blocks
    - Limited number of social media platform connections
@@ -194,6 +204,7 @@ XTelegraph transforms how users consume social media content by converting text-
 ### Revenue Streams
 
 1. **Advertising**
+
    - Audio ads in free tier
    - Targeted advertising based on content categories
    - Partnership opportunities with relevant brands

@@ -52,5 +52,11 @@
       "prettier --write"
     ]
   },
-  "eslintIgnore": [".next/**/*", "node_modules/**/*", "dist/**/*", "build/**/*", "coverage/**/*"]
+  "eslintIgnore": [
+    ".next/**/*",
+    "node_modules/**/*",
+    "dist/**/*",
+    "build/**/*",
+    "coverage/**/*"
+  ]
 }
