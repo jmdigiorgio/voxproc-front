@@ -78,10 +78,110 @@
 
 ### 1. Development Environment
 
-- Next.js development server
-- TypeScript for type checking
-- ESLint for code quality
-- Prettier for code formatting
+#### Code Quality Tools
+
+1. **ESLint Configuration**
+
+   ```javascript
+   // .eslintrc.js
+   module.exports = {
+     extends: [
+       "next/core-web-vitals",
+       "plugin:@typescript-eslint/recommended",
+       "plugin:react-hooks/recommended",
+       "plugin:jsx-a11y/recommended",
+       "prettier"
+     ],
+     plugins: [
+       "@typescript-eslint",
+       "jsx-a11y",
+       "react-hooks",
+       "prettier"
+     ],
+     rules: {
+       // React specific
+       "react-hooks/rules-of-hooks": "error",
+       "react-hooks/exhaustive-deps": "warn",
+       
+       // TypeScript
+       "@typescript-eslint/no-unused-vars": ["error"],
+       "@typescript-eslint/explicit-function-return-type": ["warn"],
+       
+       // Accessibility
+       "jsx-a11y/media-has-caption": "off", // Due to our audio nature
+       
+       // General
+       "no-console": ["warn", { allow: ["warn", "error"] }],
+       "prettier/prettier": "error"
+     }
+   }
+   ```
+
+2. **Prettier Configuration**
+
+   ```javascript
+   // .prettierrc
+   {
+     "semi": true,
+     "trailingComma": "es5",
+     "singleQuote": true,
+     "printWidth": 80,
+     "tabWidth": 2,
+     "useTabs": false
+   }
+   ```
+
+3. **TypeScript Strict Mode**
+
+   ```javascript
+   // tsconfig.json strict checks
+   {
+     "compilerOptions": {
+       "strict": true,
+       "noImplicitAny": true,
+       "strictNullChecks": true,
+       "strictFunctionTypes": true,
+       "noUnusedLocals": true,
+       "noUnusedParameters": true
+     }
+   }
+   ```
+
+4. **Pre-commit Hooks** (using husky)
+
+   ```bash
+   # .husky/pre-commit
+   #!/bin/sh
+   . "$(dirname "$0")/_/husky.sh"
+
+   npm run lint-staged
+   ```
+
+   ```javascript
+   // package.json
+   {
+     "lint-staged": {
+       "*.{ts,tsx}": [
+         "eslint --fix",
+         "prettier --write"
+       ]
+     }
+   }
+   ```
+
+5. **VS Code Settings**'
+
+   ```javascript
+   // .vscode/settings.json
+   {
+     "editor.defaultFormatter": "esbenp.prettier-vscode",
+     "editor.formatOnSave": true,
+     "editor.codeActionsOnSave": {
+       "source.fixAll.eslint": true
+     },
+     "typescript.tsdk": "node_modules/typescript/lib"
+   }
+   ```
 
 ### 2. Conventional Commits
 
