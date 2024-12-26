@@ -12,6 +12,7 @@ XTelegraph transforms how users consume social media content by converting text-
 - Social media power users looking for a more efficient way to consume content
 - People who want to be connected to social media without being totally distracted by it
 - People who are trying to spend less time on their phones
+- People who can't see well or at all but still want to consume social media
 
 ## Core Problems We're Solving
 
