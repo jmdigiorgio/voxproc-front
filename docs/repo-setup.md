@@ -4,20 +4,23 @@ This document outlines the complete setup process for a new Next.js project with
 
 ## Initial Setup
 
-1. Create a new Next.js project with TypeScript:
+- Create a new Next.js project with TypeScript:
+
 ```bash
 npx create-next-app@latest my-app --typescript --tailwind --eslint
 ```
 
 ## Git Setup
 
-1. Initialize git repository (if not already done):
+- Initialize git repository (if not already done):
+
 ```bash
 git init
 ```
 
-2. Create `.gitignore` with standard Next.js ignores:
-```
+- Create `.gitignore` with standard Next.js ignores:
+
+```code
 # dependencies
 /node_modules
 /.pnp
@@ -61,12 +64,14 @@ next-env.d.ts
 
 ## Commit Linting Setup
 
-1. Install commitlint and its conventional config:
+- Install commitlint and its conventional config:
+
 ```bash
 npm install --save-dev @commitlint/cli @commitlint/config-conventional
 ```
 
-2. Create `commitlint.config.cjs`:
+- Create `commitlint.config.cjs`:
+
 ```javascript
 module.exports = {
   extends: ['@commitlint/config-conventional'],
@@ -95,17 +100,20 @@ module.exports = {
 
 ## Husky Setup
 
-1. Install Husky for git hooks:
+- Install Husky for git hooks:
+
 ```bash
 npm install --save-dev husky
 ```
 
-2. Initialize Husky:
+- Initialize Husky:
+
 ```bash
 npx husky install
 ```
 
-3. Add Husky install to package.json scripts:
+- Add Husky install to package.json scripts:
+
 ```json
 {
   "scripts": {
@@ -114,19 +122,22 @@ npx husky install
 }
 ```
 
-4. Add commit-msg hook for commitlint:
+- Add commit-msg hook for commitlint:
+
 ```bash
 npx husky add .husky/commit-msg 'npx --no -- commitlint --edit ${1}'
 ```
 
 ## Testing Setup
 
-1. Install Jest and related dependencies:
+- Install Jest and related dependencies:
+
 ```bash
 npm install --save-dev jest @testing-library/react @testing-library/jest-dom jest-environment-jsdom
 ```
 
-2. Create `jest.config.ts`:
+- Create `jest.config.ts`:
+
 ```typescript
 import type { Config } from 'jest';
 import nextJest from 'next/jest';
@@ -143,12 +154,14 @@ const config: Config = {
 export default createJestConfig(config);
 ```
 
-3. Create `jest.setup.ts`:
+- Create `jest.setup.ts`:
+
 ```typescript
 import '@testing-library/jest-dom';
 ```
 
-4. Add test script to package.json:
+- Add test script to package.json:
+
 ```json
 {
   "scripts": {
@@ -159,12 +172,14 @@ import '@testing-library/jest-dom';
 
 ## Linting Setup
 
-1. Install ESLint and related plugins (some come with Next.js by default):
+- Install ESLint and related plugins (some come with Next.js by default):
+
 ```bash
 npm install --save-dev eslint-config-prettier
 ```
 
-2. Configure ESLint in `.eslintrc.json`:
+- Configure ESLint in `.eslintrc.json`:
+
 ```json
 {
   "extends": [
@@ -176,17 +191,20 @@ npm install --save-dev eslint-config-prettier
 
 ## Pre-commit Hooks
 
-1. Install lint-staged:
+- Install lint-staged:
+
 ```bash
 npm install --save-dev lint-staged
 ```
 
-2. Add pre-commit hook:
+- Add pre-commit hook:
+
 ```bash
 npx husky add .husky/pre-commit "npm run lint-staged"
 ```
 
-3. Add lint-staged configuration to package.json:
+- Add lint-staged configuration to package.json:
+
 ```json
 {
   "lint-staged": {
@@ -200,8 +218,9 @@ npx husky add .husky/pre-commit "npm run lint-staged"
 
 ## Environment Variables
 
-1. Create `.env.example`:
-```
+- Create `.env.example`:
+
+```code
 # API Keys
 NEXT_PUBLIC_API_URL=http://localhost:3000
 ```
@@ -209,7 +228,8 @@ NEXT_PUBLIC_API_URL=http://localhost:3000
 ## Documentation Structure
 
 Create basic documentation files:
-```
+
+```code
 docs/
 ├── tech-stack.md
 ├── product.md
@@ -218,12 +238,14 @@ docs/
 
 ## Final Steps
 
-1. Install all dependencies:
+- Install all dependencies:
+
 ```bash
 npm install
 ```
 
-2. Verify setup:
+- Verify setup:
+
 ```bash
 git commit -m "chore: Initial repository setup"
 ```
@@ -233,6 +255,7 @@ This should run through all the hooks and checks successfully.
 ## Commit Message Format
 
 Follow the conventional commits format:
+
 - Format: `type: Subject in sentence case`
 - Types: feat, fix, docs, style, refactor, test, chore, perf, revert, ci
 - Example: `feat: Add user authentication`
@@ -242,4 +265,4 @@ Follow the conventional commits format:
 - Run development server: `npm run dev`
 - Run tests: `npm test`
 - Run linting: `npm run lint`
-- Build production: `npm run build` 
+- Build production: `npm run build`
