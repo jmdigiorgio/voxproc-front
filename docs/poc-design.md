@@ -101,8 +101,6 @@ The footer houses the persistent audio player, which is a core feature of the ap
 - Always visible
 - Fixed positioning at bottom
 - Smooth transitions between states
-- Expandable for queue view
-- Collapses to mini player on mobile
 
 ### Footer Visual Style
 

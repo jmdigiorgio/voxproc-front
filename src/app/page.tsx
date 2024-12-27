@@ -1,11 +1,11 @@
 'use client';
 
-import AudioPlayerLayout from '../components/layout/audio-player-layout';
+import Wireframe from '@/components/layout/wireframe';
 
 export default function Home() {
   return (
-    <AudioPlayerLayout>
+    <Wireframe>
       {/* Optional station list or other content can go here */}
-    </AudioPlayerLayout>
+    </Wireframe>
   );
 }
