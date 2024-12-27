@@ -1,11 +1,11 @@
 'use client';
 
-import Wireframe from '@/components/layout/wireframe';
+import FeedWireframe from '@/components/wireframes/FeedWireframe';
 
 export default function Home() {
   return (
-    <Wireframe>
+    <FeedWireframe>
       {/* Optional station list or other content can go here */}
-    </Wireframe>
+    </FeedWireframe>
   );
 }
