@@ -25,7 +25,7 @@ const HeaderWireframe = () => {
             Feed
           </button>
           <button className="text-zinc-400 hover:text-emerald-400 transition-colors tracking-tight">
-            Stations
+            Explore
           </button>
           <button className="text-zinc-400 hover:text-emerald-400 transition-colors tracking-tight">
             Narrator
