@@ -1,4 +1,4 @@
-# XTelegraph - Proof of Concept Features
+# voxproc - Proof of Concept Features
 
 For simplicity, a *post* refers to a single public or semi-public message from an external social media source such as X, Threads, etc.
 

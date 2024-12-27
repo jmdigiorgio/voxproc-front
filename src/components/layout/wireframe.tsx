@@ -13,6 +13,7 @@ import {
   PlayIcon,
   StopIcon,
   SpeakerWaveIcon as VolumeIcon,
+  Cog6ToothIcon,
 } from '@heroicons/react/24/outline';
 
 const Wireframe = ({ children }: { children?: React.ReactNode }) => {
@@ -51,10 +52,13 @@ const Wireframe = ({ children }: { children?: React.ReactNode }) => {
           {/* Primary Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             <button className="text-emerald-400 hover:text-emerald-300 transition-colors tracking-tight">
-              Home
+              Feed
             </button>
             <button className="text-zinc-400 hover:text-emerald-400 transition-colors tracking-tight">
-              Discover
+              Stations
+            </button>
+            <button className="text-zinc-400 hover:text-emerald-400 transition-colors tracking-tight">
+              Narrator
             </button>
           </nav>
 
@@ -82,17 +86,6 @@ const Wireframe = ({ children }: { children?: React.ReactNode }) => {
               aria-label="User profile"
             >
               <UserCircleIcon className="w-5 h-5" />
-            </button>
-
-            <button
-              className="p-2 text-zinc-400 hover:text-emerald-400 transition-colors"
-              onClick={() => setIsMuted(!isMuted)}
-            >
-              {isMuted ? (
-                <SpeakerXMarkIcon className="w-5 h-5" />
-              ) : (
-                <SpeakerWaveIcon className="w-5 h-5" />
-              )}
             </button>
           </div>
         </div>
@@ -300,7 +293,50 @@ const Wireframe = ({ children }: { children?: React.ReactNode }) => {
           </div>
 
           {/* Empty Right Section */}
-          <div className="w-[200px]" />
+          <div className="w-[200px] flex flex-col gap-2 justify-center">
+            {/* Voice Selector and Settings */}
+            <div className="flex justify-end items-center">
+              <button
+                className="text-zinc-400 hover:text-emerald-400 transition-colors"
+                aria-label="Narrator settings"
+              >
+                <Cog6ToothIcon className="w-5 h-5" />
+              </button>
+              <select
+                className="bg-zinc-800 text-zinc-400 rounded-lg px-2 py-1 text-sm hover:text-emerald-400 transition-colors w-36 ml-2"
+                defaultValue="voice1"
+              >
+                <option value="voice1">Voice 1</option>
+                <option value="voice2">Voice 2</option>
+                <option value="voice3">Voice 3</option>
+              </select>
+            </div>
+
+            {/* Speed Control */}
+            <div className="flex justify-end">
+              <select
+                className="bg-zinc-800 text-zinc-400 rounded-lg px-2 py-1 text-sm hover:text-emerald-400 transition-colors w-36"
+                defaultValue="1.0"
+              >
+                <option value="0.75">0.75x</option>
+                <option value="1.0">1.0x</option>
+                <option value="1.5">1.5x</option>
+                <option value="2.0">2.0x</option>
+              </select>
+            </div>
+
+            {/* Broadcast Rate */}
+            <div className="flex justify-end">
+              <select
+                className="bg-zinc-800 text-zinc-400 rounded-lg px-2 py-1 text-sm hover:text-emerald-400 transition-colors w-36"
+                defaultValue="continuous"
+              >
+                <option value="continuous">Continuous</option>
+                <option value="custom">Custom</option>
+                <option value="paused">Paused</option>
+              </select>
+            </div>
+          </div>
         </div>
       </footer>
 

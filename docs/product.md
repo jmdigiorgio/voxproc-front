@@ -1,8 +1,8 @@
-# XTelegraph
+# voxproc
 
 ## Product Vision
 
-XTelegraph transforms how users consume social media content by converting text-based posts into an audio stream experience, enabling continuous or periodic information consumption without visual or tactile interruption of primary tasks. Think of it as "radio station or a personal telegraph for social media" - a background audio companion for the modern professional or people who are just tired of looking at their phones all the time.
+voxproc transforms how users consume social media content by converting text-based posts into an audio stream experience, enabling continuous or periodic information consumption without visual or tactile interruption of primary tasks. Think of it as "radio station or a personal telegraph for social media" - a background audio companion for the modern professional or people who are just tired of looking at their phones all the time.
 
 ## Target Users
 
