@@ -27,9 +27,6 @@ const HeaderWireframe = () => {
           <button className="text-zinc-400 hover:text-emerald-400 transition-colors tracking-tight">
             Explore
           </button>
-          <button className="text-zinc-400 hover:text-emerald-400 transition-colors tracking-tight">
-            Narrator
-          </button>
         </nav>
 
         {/* User Controls */}
