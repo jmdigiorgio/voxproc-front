@@ -34,37 +34,31 @@ const FooterWireframe = () => {
             <div className="w-10 h-10 rounded-lg bg-zinc-800/50 flex items-center justify-center">
               <MusicalNoteIcon className="w-5 h-5 text-emerald-400" />
             </div>
-            <div className="flex flex-col gap-2">
-              {/* Voice Meter */}
-              <div className="flex gap-1 h-4 items-end">
-                {[...Array(8)].map((_, i) => (
-                  <div
-                    key={i}
-                    className={`w-1 bg-emerald-400/80 rounded-full transition-all duration-75 ${
-                      isPlaying ? '' : 'h-0.5'
-                    }`}
-                    style={{
-                      height: isPlaying
-                        ? `${Math.max(0.2, Math.random() * 1)}rem`
-                        : '0.125rem',
-                    }}
-                  />
-                ))}
-              </div>
-              <div>
-                <div className="text-zinc-100">Currently Reading</div>
-                <div className="text-zinc-500 text-sm">Tech Twitter Feed</div>
-              </div>
+            <div className="flex flex-col">
+              <div className="text-zinc-100">Currently Streaming</div>
+              <div className="text-zinc-500 text-sm">TechCrunch</div>
             </div>
           </div>
 
           {/* Progress Bar and Controls Group */}
           <div className="flex-1 flex flex-col gap-4 max-w-3xl mx-auto">
-            {/* Progress Bar */}
-            <div className="flex items-center gap-2 w-full">
+            {/* Audio Visualizer */}
+            <div className="flex items-center gap-2 w-full h-8 justify-center">
               <div className="text-zinc-500 text-sm">0:00</div>
-              <div className="flex-1 h-1 bg-zinc-800 rounded-full">
-                <div className="w-1/3 h-full bg-emerald-400 rounded-full"></div>
+              <div className="flex-1 flex items-end justify-center gap-[3px] h-full px-4">
+                {[...Array(80)].map((_, i) => (
+                  <div
+                    key={i}
+                    className={`w-1.5 bg-emerald-400/80 rounded-full transition-all duration-75 ${
+                      isPlaying ? '' : 'h-1'
+                    }`}
+                    style={{
+                      height: isPlaying
+                        ? `${Math.max(0.25, Math.sin(i * 0.2) * 0.5 + Math.random() * 0.5) * 100}%`
+                        : '0.25rem',
+                    }}
+                  />
+                ))}
               </div>
               <div className="text-zinc-500 text-sm">1:30</div>
             </div>
@@ -118,14 +112,8 @@ const FooterWireframe = () => {
           <div className="w-[200px] flex flex-col gap-2 justify-center">
             {/* Voice Selector and Settings */}
             <div className="flex justify-end items-center">
-              <button
-                className="text-zinc-400 hover:text-emerald-400 transition-colors"
-                aria-label="Narrator settings"
-              >
-                <Cog6ToothIcon className="w-5 h-5" />
-              </button>
               <select
-                className="bg-zinc-800 text-zinc-400 rounded-lg px-2 py-1 text-sm hover:text-emerald-400 transition-colors w-36 ml-2"
+                className="bg-zinc-800 text-zinc-400 rounded-lg px-2 py-1 text-sm hover:text-emerald-400 transition-colors w-36"
                 defaultValue="voice1"
               >
                 <option value="voice1">Voice 1</option>

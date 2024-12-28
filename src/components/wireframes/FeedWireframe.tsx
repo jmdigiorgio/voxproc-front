@@ -20,9 +20,15 @@ const FeedWireframe = ({ children }: { children?: React.ReactNode }) => {
           <div className="w-1/4">
             <div className="flex justify-center mb-4">
               <div className="flex items-center gap-2 px-4 py-1 bg-zinc-900 rounded-lg">
-                <button className="p-1 rounded-lg hover:bg-zinc-800 text-zinc-500 hover:text-zinc-400">
-                  <Cog6ToothIcon className="w-4 h-4" />
-                </button>
+                <div className="group/tooltip relative">
+                  <button className="p-1 rounded-lg hover:bg-zinc-800 text-zinc-500 hover:text-zinc-400">
+                    <Cog6ToothIcon className="w-4 h-4" />
+                  </button>
+                  <div className="absolute hidden group-hover/tooltip:block w-64 p-2 bg-zinc-900 !bg-opacity-100 text-zinc-300 text-xs rounded-lg left-0 top-8 shadow-xl border border-zinc-800 z-50">
+                    Takes the user to a page where they can change settings
+                    related to the queue of posts that are in line to be read.
+                  </div>
+                </div>
                 <h2 className="text-zinc-400 text-lg tracking-tight">Queue</h2>
               </div>
             </div>
@@ -113,7 +119,7 @@ const FeedWireframe = ({ children }: { children?: React.ReactNode }) => {
                   <h2 className="text-emerald-400 text-lg tracking-tight">
                     Now Playing
                   </h2>
-                  <div className="absolute hidden group-hover/tooltip:block w-64 p-2 bg-[rgb(0,0,0)] text-zinc-300 text-xs rounded-lg left-0 top-8 shadow-xl">
+                  <div className="absolute hidden group-hover/tooltip:block w-64 p-2 bg-zinc-900 !bg-opacity-100 text-zinc-300 text-xs rounded-lg left-0 top-8 shadow-xl border border-zinc-800 z-50">
                     The post currently being read aloud or queued to be read
                     aloud next
                   </div>
@@ -121,7 +127,7 @@ const FeedWireframe = ({ children }: { children?: React.ReactNode }) => {
                 <div className="flex items-center gap-3">
                   <div className="group/tooltip relative">
                     <div className="text-zinc-500 text-sm">via Bluesky</div>
-                    <div className="absolute hidden group-hover/tooltip:block w-64 p-2 bg-[rgb(0,0,0)] text-zinc-300 text-xs rounded-lg -left-[120px] top-8 shadow-xl">
+                    <div className="absolute hidden group-hover/tooltip:block w-64 p-2 bg-zinc-900 !bg-opacity-100 text-zinc-300 text-xs rounded-lg -left-[120px] top-8 shadow-xl border border-zinc-800 z-50">
                       The source of the post being read aloud
                     </div>
                   </div>
@@ -132,7 +138,7 @@ const FeedWireframe = ({ children }: { children?: React.ReactNode }) => {
                     >
                       <XMarkIcon className="w-5 h-5" />
                     </button>
-                    <div className="absolute hidden group-hover/tooltip:block w-64 p-2 bg-[rgb(0,0,0)] text-zinc-300 text-xs rounded-lg -left-[120px] top-8 shadow-xl">
+                    <div className="absolute hidden group-hover/tooltip:block w-64 p-2 bg-zinc-900 !bg-opacity-100 text-zinc-300 text-xs rounded-lg -left-[120px] top-8 shadow-xl border border-zinc-800 z-50">
                       The user can close this component and Network Updates will
                       expand upward to fill the void
                     </div>
@@ -148,7 +154,7 @@ const FeedWireframe = ({ children }: { children?: React.ReactNode }) => {
                         T
                       </span>
                     </div>
-                    <div className="absolute hidden group-hover/tooltip:block w-64 p-2 bg-[rgb(0,0,0)] text-zinc-300 text-xs rounded-lg left-0 top-14 shadow-xl">
+                    <div className="absolute hidden group-hover/tooltip:block w-64 p-2 bg-zinc-900 !bg-opacity-100 text-zinc-300 text-xs rounded-lg left-0 top-14 shadow-xl border border-zinc-800 z-50">
                       The avatar of the social media account whose post is being
                       read aloud
                     </div>
@@ -159,7 +165,7 @@ const FeedWireframe = ({ children }: { children?: React.ReactNode }) => {
                         <div className="text-zinc-300 font-medium">
                           @techcrunch
                         </div>
-                        <div className="absolute hidden group-hover/tooltip:block w-64 p-2 bg-[rgb(0,0,0)] text-zinc-300 text-xs rounded-lg left-0 top-6 shadow-xl">
+                        <div className="absolute hidden group-hover/tooltip:block w-64 p-2 bg-zinc-900 !bg-opacity-100 text-zinc-300 text-xs rounded-lg left-0 top-6 shadow-xl border border-zinc-800 z-50">
                           The username of the social media account whose post is
                           being read aloud
                         </div>
@@ -168,14 +174,14 @@ const FeedWireframe = ({ children }: { children?: React.ReactNode }) => {
                     <div className="text-zinc-500 text-sm">
                       <div className="group/tooltip relative inline-block">
                         <span>TechCrunch</span>
-                        <div className="absolute hidden group-hover/tooltip:block w-64 p-2 bg-[rgb(0,0,0)] text-zinc-300 text-xs rounded-lg left-0 top-6 shadow-xl">
+                        <div className="absolute hidden group-hover/tooltip:block w-64 p-2 bg-zinc-900 !bg-opacity-100 text-zinc-300 text-xs rounded-lg left-0 top-6 shadow-xl border border-zinc-800 z-50">
                           The station that the post belongs to
                         </div>
                       </div>
                       {' • '}
                       <div className="group/tooltip relative inline-block">
                         <span>5m ago</span>
-                        <div className="absolute hidden group-hover/tooltip:block w-64 p-2 bg-[rgb(0,0,0)] text-zinc-300 text-xs rounded-lg right-0 top-6 shadow-xl">
+                        <div className="absolute hidden group-hover/tooltip:block w-64 p-2 bg-zinc-900 !bg-opacity-100 text-zinc-300 text-xs rounded-lg right-0 top-6 shadow-xl border border-zinc-800 z-50">
                           How long ago the post was created on its respective
                           social media source
                         </div>
@@ -200,9 +206,16 @@ const FeedWireframe = ({ children }: { children?: React.ReactNode }) => {
             {/* Network Updates Title */}
             <div className="flex justify-center mb-4">
               <div className="flex items-center gap-2 px-4 py-1 bg-zinc-900 rounded-lg">
-                <button className="p-1 rounded-lg hover:bg-zinc-800 text-zinc-500 hover:text-zinc-400">
-                  <Cog6ToothIcon className="w-4 h-4" />
-                </button>
+                <div className="group/tooltip relative">
+                  <button className="p-1 rounded-lg hover:bg-zinc-800 text-zinc-500 hover:text-zinc-400">
+                    <Cog6ToothIcon className="w-4 h-4" />
+                  </button>
+                  <div className="absolute hidden group-hover/tooltip:block w-64 p-2 bg-zinc-900 !bg-opacity-100 text-zinc-300 text-xs rounded-lg left-0 top-8 shadow-xl border border-zinc-800 z-50">
+                    Takes the user to a page where they can change settings for
+                    what kind of network updates they get and how those updates
+                    are displayed.
+                  </div>
+                </div>
                 <h2 className="text-zinc-400 text-lg tracking-tight">
                   Network Updates
                 </h2>
@@ -374,11 +387,17 @@ const FeedWireframe = ({ children }: { children?: React.ReactNode }) => {
           <div className="w-1/4">
             <div className="flex justify-center mb-4">
               <div className="flex items-center gap-2 px-4 py-1 bg-zinc-900 rounded-lg">
-                <button className="p-1 rounded-lg hover:bg-zinc-800 text-zinc-500 hover:text-zinc-400">
-                  <Cog6ToothIcon className="w-4 h-4" />
-                </button>
+                <div className="group/tooltip relative">
+                  <button className="p-1 rounded-lg hover:bg-zinc-800 text-zinc-500 hover:text-zinc-400">
+                    <Cog6ToothIcon className="w-4 h-4" />
+                  </button>
+                  <div className="absolute hidden group-hover/tooltip:block w-64 p-2 bg-zinc-900 !bg-opacity-100 text-zinc-300 text-xs rounded-lg left-0 top-8 shadow-xl border border-zinc-800 z-50">
+                    Takes the user to a page where they can create or modify the
+                    streams in their list.
+                  </div>
+                </div>
                 <h2 className="text-zinc-400 text-lg tracking-tight">
-                  Stations
+                  Streams
                 </h2>
               </div>
             </div>
@@ -407,7 +426,7 @@ const FeedWireframe = ({ children }: { children?: React.ReactNode }) => {
               <div className="p-4 bg-zinc-900 rounded-lg border-2 border-emerald-400/20">
                 <div className="flex justify-between items-start mb-3">
                   <div className="text-emerald-400 text-xs uppercase tracking-wider">
-                    Current Station
+                    Current Stream
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -454,7 +473,7 @@ const FeedWireframe = ({ children }: { children?: React.ReactNode }) => {
 
               {/* Station Count */}
               <div className="text-center text-zinc-500 text-sm">
-                4 pinned stations
+                4 pinned streams
               </div>
             </div>
           </div>
