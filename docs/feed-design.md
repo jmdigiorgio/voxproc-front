@@ -2,7 +2,7 @@
 
 ## Overview
 
-The feed is the primary interface for users to consume and manage their audio content streams. It provides real-time updates about current playback, network activity, and station management.
+The feed is the primary interface for users to listen to their streams. It provides real-time updates about current playback, queued content, and community activity.
 
 ## Layout Structure
 

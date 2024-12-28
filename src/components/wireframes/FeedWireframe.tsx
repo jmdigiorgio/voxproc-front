@@ -217,7 +217,7 @@ const FeedWireframe = ({ children }: { children?: React.ReactNode }) => {
                   </div>
                 </div>
                 <h2 className="text-zinc-400 text-lg tracking-tight">
-                  Network Updates
+                  Community
                 </h2>
               </div>
             </div>
@@ -235,7 +235,7 @@ const FeedWireframe = ({ children }: { children?: React.ReactNode }) => {
                       <div className="flex items-center justify-between">
                         <div className="text-zinc-300 text-sm">
                           <span className="font-medium">@alex</span> created a
-                          new station
+                          new stream
                         </div>
                         <div className="text-zinc-600 text-sm mr-7">2m ago</div>
                       </div>
@@ -321,7 +321,7 @@ const FeedWireframe = ({ children }: { children?: React.ReactNode }) => {
                       <div className="flex items-center justify-between">
                         <div className="text-zinc-300 text-sm">
                           <span className="font-medium">@james</span> added
-                          sources to your station
+                          sources to your stream
                         </div>
                         <div className="text-zinc-600 text-sm mr-7">
                           20m ago
@@ -334,7 +334,7 @@ const FeedWireframe = ({ children }: { children?: React.ReactNode }) => {
                   </div>
                 </div>
 
-                {/* Station Merge Update */}
+                {/* Stream Merge Update */}
                 <div className="group p-3 bg-zinc-800/50 rounded-lg relative">
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-lg bg-zinc-800 flex items-center justify-center">
@@ -344,7 +344,7 @@ const FeedWireframe = ({ children }: { children?: React.ReactNode }) => {
                       <div className="flex items-center justify-between">
                         <div className="text-zinc-300 text-sm">
                           <span className="font-medium">@emma</span> merged
-                          their station with
+                          their stream with
                         </div>
                         <div className="text-zinc-600 text-sm mr-7">
                           25m ago
@@ -357,7 +357,7 @@ const FeedWireframe = ({ children }: { children?: React.ReactNode }) => {
                   </div>
                 </div>
 
-                {/* Station Theme Update */}
+                {/* Stream Theme Update */}
                 <div className="group p-3 bg-zinc-800/50 rounded-lg relative">
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded-lg bg-zinc-800 flex items-center justify-center">
@@ -367,7 +367,7 @@ const FeedWireframe = ({ children }: { children?: React.ReactNode }) => {
                       <div className="flex items-center justify-between">
                         <div className="text-zinc-300 text-sm">
                           <span className="font-medium">@ryan</span> updated
-                          station theme
+                          stream theme
                         </div>
                         <div className="text-zinc-600 text-sm mr-7">
                           30m ago
