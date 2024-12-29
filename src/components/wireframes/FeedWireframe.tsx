@@ -35,8 +35,11 @@ const FeedWireframe = ({ children }: { children?: React.ReactNode }) => {
             <div className="space-y-4">
               {/* Previously Played */}
               <div className="p-4 bg-zinc-900/50 rounded-lg opacity-50">
-                <div className="text-zinc-500 text-xs uppercase tracking-wider mb-3">
-                  Previous
+                <div className="flex justify-between items-center mb-3">
+                  <div className="text-zinc-500 text-xs uppercase tracking-wider">
+                    Previous
+                  </div>
+                  <div className="text-zinc-500 text-xs">X</div>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 rounded-lg bg-zinc-800 flex items-center justify-center shrink-0">
@@ -55,10 +58,11 @@ const FeedWireframe = ({ children }: { children?: React.ReactNode }) => {
 
               {/* Now Playing */}
               <div className="p-4 bg-zinc-900 rounded-lg border-2 border-emerald-400/20">
-                <div className="flex justify-between items-start mb-3">
+                <div className="flex justify-between items-center mb-3">
                   <div className="text-emerald-400 text-xs uppercase tracking-wider">
                     Now Playing
                   </div>
+                  <div className="text-emerald-400 text-xs">Bluesky</div>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 rounded-lg bg-emerald-400/10 flex items-center justify-center shrink-0">
@@ -80,8 +84,11 @@ const FeedWireframe = ({ children }: { children?: React.ReactNode }) => {
 
               {/* Up Next */}
               <div className="p-4 bg-zinc-900/50 rounded-lg opacity-50">
-                <div className="text-zinc-500 text-xs uppercase tracking-wider mb-3">
-                  Up Next
+                <div className="flex justify-between items-center mb-3">
+                  <div className="text-zinc-500 text-xs uppercase tracking-wider">
+                    Up Next
+                  </div>
+                  <div className="text-zinc-500 text-xs">Threads</div>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 rounded-lg bg-zinc-800 flex items-center justify-center shrink-0">
@@ -404,8 +411,11 @@ const FeedWireframe = ({ children }: { children?: React.ReactNode }) => {
             <div className="space-y-4">
               {/* Previously Playing Station */}
               <div className="p-4 bg-zinc-900/50 rounded-lg opacity-50">
-                <div className="text-zinc-500 text-xs uppercase tracking-wider mb-3">
-                  Previous
+                <div className="flex justify-between items-center mb-3">
+                  <div className="text-zinc-500 text-xs uppercase tracking-wider">
+                    Previous
+                  </div>
+                  <div className="text-zinc-500 text-xs">X</div>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 rounded-lg bg-zinc-800 flex items-center justify-center shrink-0">
@@ -424,10 +434,11 @@ const FeedWireframe = ({ children }: { children?: React.ReactNode }) => {
 
               {/* Current Station */}
               <div className="p-4 bg-zinc-900 rounded-lg border-2 border-emerald-400/20">
-                <div className="flex justify-between items-start mb-3">
+                <div className="flex justify-between items-center mb-3">
                   <div className="text-emerald-400 text-xs uppercase tracking-wider">
                     Current Stream
                   </div>
+                  <div className="text-emerald-400 text-xs">Bluesky</div>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 rounded-lg bg-emerald-400/10 flex items-center justify-center shrink-0">
@@ -448,8 +459,11 @@ const FeedWireframe = ({ children }: { children?: React.ReactNode }) => {
 
               {/* Pinned Stations */}
               <div className="p-4 bg-zinc-900/50 rounded-lg opacity-50">
-                <div className="text-zinc-500 text-xs uppercase tracking-wider mb-3">
-                  Pinned
+                <div className="flex justify-between items-center mb-3">
+                  <div className="text-zinc-500 text-xs uppercase tracking-wider">
+                    Pinned
+                  </div>
+                  <div className="text-zinc-500 text-xs">Threads</div>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 rounded-lg bg-zinc-800 flex items-center justify-center shrink-0">
