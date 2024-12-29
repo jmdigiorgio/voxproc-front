@@ -8,13 +8,13 @@ The feed is the primary interface for users to listen to their streams. It provi
 
 ### Three Column Layout
 
-```
-+----------------+----------------+----------------+
+```code
++----------------+----------------+--------------+
 |     Queue      |     Main      |   Stations    |
 |                |   Viewport    |               |
 |                |               |               |
 |  [25% width]   |  [50% width]  |  [25% width]  |
-+----------------+----------------+----------------+
++----------------+----------------+--------------+
 ```
 
 ## Column Details
@@ -23,8 +23,10 @@ The feed is the primary interface for users to listen to their streams. It provi
 
 Shows the content queue with previous, current, and upcoming posts.
 
-#### Components
+#### Queue Components
+
 1. **Queue Title**
+   - Indicates to the user that this is the queue
    - Settings button
    - Centered in container
 
@@ -54,70 +56,68 @@ Shows the content queue with previous, current, and upcoming posts.
 
 ### Center Column: Main Viewport
 
-Primary content display area showing detailed views of either the current post or station, as well as network updates.
+Primary content display area showing a detailed view of the current post streaming. Below the post are the user's community updates.
 
 #### Components
-1. **Detailed View**
-   - Can show either post or station details
-   - Close button to dismiss view
-   - Content varies based on type:
-     
-     **Post View**
+
+1. **Post View**
      - Platform source indicator
-     - Author info with avatar
+     - Account name with avatar
      - Link to original post
      - Timestamp
      - Full post content
 
-     **Station View**
-     - Station name and icon
-     - Source list with usernames
-     - Station status
-     - Current activity
-
-2. **Network Updates**
+2. **Community**
    - Centered section title with settings
    - Individual update cards
    - Dismissible updates (X button)
    - Timestamps
    - User avatars
+   - User names
    - Action descriptions
+      - Followed
+      - Created a new stream
+      - Added to an existing stream
+      - Created a channel (multiple, categorized streams)
 
-### Right Column: Stations
+### Right Column: Stream
 
-Managing and switching between different content sources.
+Streams are curated lists of social media accounts whose posts are audio streamed in voxproc.
 
-#### Components
-1. **Stations Title**
+#### Stream Components
+
+1. **Streams Title**
    - Settings button
    - Centered in container
 
-2. **Previous Station**
+2. **Previous Stream**
    - Dimmed appearance
    - Station icon
    - Station name
    - Source list
 
-3. **Current Station**
+3. **Current Stream**
    - Highlighted with emerald border
    - Station icon
-   - Station name
+   - Stream name
    - Source list
    - Send to viewport button
 
-4. **Pinned Stations**
+4. **Pinned Streams**
    - Dimmed appearance
-   - Station icon
-   - Station name
-   - Source list
+   - Stream icon
+   - Stream name
+   - Source list preview
+   - Platform source icon
 
 5. **Station Controls**
    - Show More button
-   - Pinned stations count
+   - Pinned streams count
 
 ## Visual Design
 
 ### Color Scheme
+
 - Dark theme primary (bg-zinc-950)
 - Emerald accents (#10B981)
 - Status indicators
@@ -126,6 +126,7 @@ Managing and switching between different content sources.
   - Hover: Zinc-800
 
 ### Typography
+
 - Monospace font family
 - Hierarchical sizing
   - Section titles: text-lg
@@ -133,6 +134,7 @@ Managing and switching between different content sources.
   - Labels: text-xs uppercase
 
 ### Component Styling
+
 - Rounded corners (rounded-lg)
 - Consistent padding (p-4, p-6)
 - Hover states on interactive elements
@@ -142,17 +144,20 @@ Managing and switching between different content sources.
 ## Responsive Behavior
 
 ### Desktop (>1024px)
+
 - Full three-column layout
 - Fixed header and footer
 - All columns visible
 
 ### Tablet (768px - 1024px)
+
 - Two columns
   - Combined queue/content
   - Station management
 - Collapsible sections
 
 ### Mobile (<768px)
+
 - Single column
 - Bottom navigation
 - Swipe between sections
@@ -161,18 +166,21 @@ Managing and switching between different content sources.
 ## Interactive Elements
 
 ### Buttons
+
 - Settings buttons for each section
 - Send to viewport buttons
 - Dismiss update buttons
 - Show more buttons
 
 ### Hover States
+
 - Background color changes
 - Text color changes
 - Opacity transitions
 - Icon button highlights
 
 ### Content Flow
+
 - Queue progression
 - Station switching
 - Network update feed
