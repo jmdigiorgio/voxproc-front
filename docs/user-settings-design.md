@@ -62,6 +62,10 @@ Streams are the core functionality of the app. They are the whole purpose that t
   - Voice speed
 - **Queue** - The queue is the list of pending broadcasts.
   - Queue size - The maximum number of broadcasts that can be held in the queue. A number between 1 and 25. 10 by default.
+- **Visibility** - The visibility of each user-created stream to other users.
+  - Public 🟢 - The stream is visible to all users.
+  - Followers only 🔴 - The stream is visible only to the user's followers.
+  - Private 💳 🔴 - The stream is visible only to the user.
 
 ## Community Settings
 
