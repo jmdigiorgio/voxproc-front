@@ -1,0 +1,85 @@
+@startwbs voxproc-user-functions
+
+title Voxproc User Functions Breakdown by Context
+
+legend top
+
+  |= Color/Symbol |= Name |= Description |
+  |<#LightCoral>| Context | The context of the user interface. A context may be its own page or tab within a page. |
+  |<#LightGreen>| Function Container | Not a real function but rather a container to organize real functions under. |
+  |<#LightSkyBlue>| User Function | A real function that can be executed by the user. |
+  
+endlegend
+
+*[#LightCoral] Voxproc User Interface
+
+**[#LightCoral] Feed
+
+
+**[#LightCoral] Settings
+***[#LightSkyBlue] Switch between settings contexts
+***[#LightCoral] Account Settings
+****[#LightGreen] Manage Username
+*****[#LightSkyBlue] View username
+*****[#LightSkyBlue] Change username
+****[#LightGreen] Manage Email
+*****[#LightSkyBlue] View email
+*****[#LightSkyBlue] Change email
+****[#LightGreen] Manage Phone Number
+*****[#LightSkyBlue] View phone number
+*****[#LightSkyBlue] Change phone number
+****[#LightGreen] Manage Birthdate
+*****[#LightSkyBlue] View birthdate
+*****[#LightSkyBlue] Change birthdate
+****[#LightGreen] Manage Location
+*****[#LightSkyBlue] View location
+*****[#LightSkyBlue] Change location
+****[#LightGreen] Manage Avatar
+*****[#LightSkyBlue] View avatar
+*****[#LightSkyBlue] Change avatar
+****[#LightGreen] Manage Password
+*****[#LightSkyBlue] Create new password
+*****[#LightSkyBlue] Confirm new password
+****[#LightGreen] Manage Subscription
+*****[#LightSkyBlue] View subscription
+*****[#LightSkyBlue] Subscribe
+*****[#LightSkyBlue] Cancel subscription
+****[#LightGreen] Manage Security
+*****[#LightSkyBlue] Enable/Disable 2FA
+*****[#LightSkyBlue] View active sessions
+*****[#LightSkyBlue] Manage device access
+****[#LightGreen] Manage Accessibility
+*****[#LightSkyBlue] Change language
+*****[#LightSkyBlue] Adjust text size
+*****[#LightSkyBlue] Set contrast preferences
+****[#LightGreen] Manage Account Deletion
+*****[#LightSkyBlue] Delete account
+*****[#LightSkyBlue] Confirm delete account
+***[#LightCoral] Notification Settings
+****[#LightGreen] Manage Community Notifications
+*****[#LightSkyBlue] Toggle community notifications
+******[#LightSkyBlue] Filter community notifications
+******[#LightSkyBlue] Set notification frequency
+****[#LightGreen] Manage Stream Notifications
+*****[#LightSkyBlue] Toggle stream notifications
+*****[#LightSkyBlue] Toggle filter notification types
+******[#LightSkyBlue] Toggle source account problems
+******[#LightSkyBlue] Toggle platform connection issues
+******[#LightSkyBlue] Toggle stream update notifications
+*******[#LightSkyBlue] Toggle trending public streams
+*******[#LightSkyBlue] Toggle new streams from followed users
+*******[#LightSkyBlue] Toggle changes to followed streams
+*******[#LightSkyBlue] Set notification frequency
+****[#LightGreen] Manage User Notifications
+*****[#LightSkyBlue] View user notifications
+*****[#LightSkyBlue] Filter user notifications
+*****[#LightSkyBlue] Set notification frequency
+***[#LightCoral] Stream Settings
+***[#LightCoral] Community Settings
+***[#LightCoral] Privacy Settings
+
+**[#LightCoral] Sign Up
+
+**[#LightCoral] Login
+
+@endwbs
