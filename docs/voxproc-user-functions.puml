@@ -13,6 +13,7 @@ legend top
   |►| Button Action | User is meant to interact with the function via a button action. |
   |✎| String Input Field | User is meant to interact with the function via a string input field. |
   |📁| File Upload Field | User is meant to interact with the function via a file upload field. |
+  |📅| Date Picker | User is meant to interact with the function via a date picker. |
   
 endlegend
 
@@ -37,7 +38,7 @@ endlegend
 *****[#LightSkyBlue] ✎ Change phone number
 ****[#LightGreen] Manage Birthdate
 *****[#LightSkyBlue] View birthdate
-*****[#LightSkyBlue] ✎ Change birthdate
+*****[#LightSkyBlue] 📅 Change birthdate
 ****[#LightGreen] Manage Location
 *****[#LightSkyBlue] View location
 *****[#LightSkyBlue] ✎ Change location

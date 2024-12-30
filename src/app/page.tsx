@@ -1,11 +1,12 @@
 'use client';
 
-import FeedWireframe from '@/components/wireframes/FeedWireframe';
+import React from 'react';
+import SettingsWireframe from '@/components/wireframes/SettingsWireframe';
 
 export default function Home() {
   return (
-    <FeedWireframe>
-      {/* Optional station list or other content can go here */}
-    </FeedWireframe>
+    <SettingsWireframe>
+      {/* Optional settings content can go here */}
+    </SettingsWireframe>
   );
 }
