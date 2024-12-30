@@ -130,6 +130,17 @@ endlegend
 *****[#LightSkyBlue] Change maximum queue size
 '### COMMUNITY SETTINGS
 ***[#LightCoral] Community Settings
+****[#LightSkyBlue] Toggle community participation
+*****[#LightSkyBlue] Toggle broadcast new user-created stream
+*****[#LightSkyBlue] Toggle broadcast changes to user-created streams
+*****[#LightSkyBlue] Toggle broadcast when user follows a stream
+*****[#LightSkyBlue] Toggle broadcast when user follows another user
+*****[#LightSkyBlue] Toggle broadcast when user likes a community post
+*****[#LightSkyBlue] Toggle broadcast when user likes a stream
+*****[#LightSkyBlue] Toggle broadcast what stream the user is listening to
+
+'--------------------EXPLORE--------------------
+**[#LightCoral] Explore
 
 '--------------------SIGN UP--------------------
 **[#LightCoral] Sign Up
