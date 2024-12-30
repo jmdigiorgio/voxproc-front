@@ -13,11 +13,13 @@ endlegend
 
 *[#LightCoral] Voxproc User Interface
 
+'--------------------FEED--------------------
 **[#LightCoral] Feed
 
-
+'--------------------SETTINGS--------------------
 **[#LightCoral] Settings
 ***[#LightSkyBlue] Switch between settings contexts
+'### ACCOUNT SETTINGS
 ***[#LightCoral] Account Settings
 ****[#LightGreen] Manage Username
 *****[#LightSkyBlue] View username
@@ -52,34 +54,87 @@ endlegend
 *****[#LightSkyBlue] Change language
 *****[#LightSkyBlue] Adjust text size
 *****[#LightSkyBlue] Set contrast preferences
+****[#LightGreen] Manage Account Privacy
+*****[#LightSkyBlue] Toggle profile visibility
+******[#LightSkyBlue] Toggle email visibility
+******[#LightSkyBlue] Toggle phone number visibility
+******[#LightSkyBlue] Toggle birthdate visibility
+******[#LightSkyBlue] Toggle location visibility
+*****[#LightSkyBlue] Toggle activity ledger visibility
+*****[#LightSkyBlue] Toggle user follower list visibility
+*****[#LightSkyBlue] Toggle follower permissions
 ****[#LightGreen] Manage Account Deletion
 *****[#LightSkyBlue] Delete account
 *****[#LightSkyBlue] Confirm delete account
+'### NOTIFICATION SETTINGS
 ***[#LightCoral] Notification Settings
 ****[#LightGreen] Manage Community Notifications
 *****[#LightSkyBlue] Toggle community notifications
-******[#LightSkyBlue] Filter community notifications
-******[#LightSkyBlue] Set notification frequency
+*****[#LightSkyBlue] Set notification frequency
+*****[#LightSkyBlue] Toggle filter notification types
+******[#LightSkyBlue] Toggle new followers
+******[#LightSkyBlue] Toggle followed account activity
+******[#LightSkyBlue] Toggle trending activity
+******[#LightSkyBlue] Toggle user activity likes
+'### STREAM SETTINGS
 ****[#LightGreen] Manage Stream Notifications
 *****[#LightSkyBlue] Toggle stream notifications
+*****[#LightSkyBlue] Set notification frequency
 *****[#LightSkyBlue] Toggle filter notification types
 ******[#LightSkyBlue] Toggle source account problems
 ******[#LightSkyBlue] Toggle platform connection issues
 ******[#LightSkyBlue] Toggle stream update notifications
 *******[#LightSkyBlue] Toggle trending public streams
 *******[#LightSkyBlue] Toggle new streams from followed users
-*******[#LightSkyBlue] Toggle changes to followed streams
-*******[#LightSkyBlue] Set notification frequency
-****[#LightGreen] Manage User Notifications
-*****[#LightSkyBlue] View user notifications
-*****[#LightSkyBlue] Filter user notifications
+*******[#LightSkyBlue] Toggle new user stream followers
+*******[#LightSkyBlue] Toggle source additions to followed streams
+*******[#LightSkyBlue] Toggle when a user stream is shared
+****[#LightGreen] Manage Product Notifications
 *****[#LightSkyBlue] Set notification frequency
+*****[#LightSkyBlue] Toggle product notifications
+******[#LightSkyBlue] Toggle product updates
+******[#LightSkyBlue] Toggle promotional notifications
 ***[#LightCoral] Stream Settings
+****[#LightGreen] Manage Stream Identity
+*****[#LightGreen] Manage Stream Name
+******[#LightSkyBlue] View stream name
+******[#LightSkyBlue] Change stream name
+*****[#LightGreen] Manage Stream Description
+******[#LightSkyBlue] View stream description
+******[#LightSkyBlue] Change stream description
+*****[#LightGreen] Manage Stream Tags
+******[#LightSkyBlue] View stream tags
+******[#LightSkyBlue] Add stream tag
+******[#LightSkyBlue] Remove stream tag
+*****[#LightGreen] Manage Stream Avatar
+******[#LightSkyBlue] View stream avatar
+******[#LightSkyBlue] Change stream avatar
+****[#LightGreen] Manage Stream Sources
+*****[#LightSkyBlue] View stream sources
+*****[#LightSkyBlue] Add stream source
+*****[#LightSkyBlue] Remove stream source
+****[#LightGreen] Manage Stream Personality
+*****[#LightSkyBlue] View stream personality
+*****[#LightSkyBlue] Change stream personality
+****[#LightGreen] Manage Stream Language
+*****[#LightSkyBlue] View stream language
+*****[#LightSkyBlue] Change stream language
+****[#LightGreen] Manage Stream Flow
+*****[#LightSkyBlue] View stream flow
+*****[#LightSkyBlue] Change stream flow
+****[#LightGreen] Manage Stream Sounds
+*****[#LightSkyBlue] View stream sounds
+*****[#LightSkyBlue] Change stream sounds
+****[#LightGreen] Manage Queue
+*****[#LightSkyBlue] View maximum queue size
+*****[#LightSkyBlue] Change maximum queue size
+'### COMMUNITY SETTINGS
 ***[#LightCoral] Community Settings
-***[#LightCoral] Privacy Settings
 
+'--------------------SIGN UP--------------------
 **[#LightCoral] Sign Up
 
+'--------------------LOGIN--------------------
 **[#LightCoral] Login
 
 @endwbs
