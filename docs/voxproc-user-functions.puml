@@ -5,7 +5,7 @@ title Voxproc User Functions Breakdown by Context
 legend top
 
   |= Color/Symbol |= Name |= Description |
-  |<#LightCoral>| Context | The context of the user interface. A context may be its own page or tab within a page. |
+  |<#LightCoral>| Context | The context of the user interface. A context may be its own page or a tab within a page. |
   |<#LightGreen>| Function Container | Not a real function but rather a container to organize real functions under. |
   |<#LightSkyBlue>| User Function | A real function that can be executed by the user. |
   
