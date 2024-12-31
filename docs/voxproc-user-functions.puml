@@ -8,6 +8,7 @@ legend top
   |<#LightCoral>| Context | The context of the user interface. A context may be its own page or a tab within a page. |
   |<#LightGreen>| Function Container | Not a real function but rather a container to organize real functions under. |
   |<#LightSkyBlue>| User Function | A real function that can be executed by the user. |
+  |<#LightPink>| Frontend System Function | A system function that occurs in the frontend in response to a user function. |
   |🔘| Toggle Switch | User is meant to interact with the function via a toggle switch. |
   |▼| Dropdown | User is meant to interact with the function via a dropdown menu. |
   |►| Button Action | User is meant to interact with the function via a button action. |
@@ -30,12 +31,19 @@ endlegend
 ****[#LightGreen] Manage Username
 *****[#LightSkyBlue] View username
 *****[#LightSkyBlue] ✎ Change username
+******[#LightPink] Validate username
 ****[#LightGreen] Manage Email
 *****[#LightSkyBlue] View email
 *****[#LightSkyBlue] ✎ Change email
+******[#LightPink] Validate email
+****[#LightGreen] Manage Bio
+*****[#LightSkyBlue] View bio
+*****[#LightSkyBlue] ✎ Change bio
+******[#LightPink] Validate bio
 ****[#LightGreen] Manage Phone Number
 *****[#LightSkyBlue] View phone number
 *****[#LightSkyBlue] ✎ Change phone number
+******[#LightPink] Validate phone number
 ****[#LightGreen] Manage Birthdate
 *****[#LightSkyBlue] View birthdate
 *****[#LightSkyBlue] 📅 Change birthdate
@@ -45,9 +53,11 @@ endlegend
 ****[#LightGreen] Manage Avatar
 *****[#LightSkyBlue] View avatar
 *****[#LightSkyBlue] 📁 Change avatar
+******[#LightPink] Validate avatar
 ****[#LightGreen] Manage Password
 *****[#LightSkyBlue] ✎ Create new password
 *****[#LightSkyBlue] ✎ Confirm new password
+******[#LightPink] Validate password
 ****[#LightGreen] Manage Subscription
 *****[#LightSkyBlue] View subscription
 *****[#LightSkyBlue] ► Subscribe

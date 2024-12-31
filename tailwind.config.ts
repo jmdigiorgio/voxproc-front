@@ -13,7 +13,9 @@ const config: Config = {
   theme: {
     container: {
       center: true,
-      padding: '2rem',
+      padding: {
+        DEFAULT: '0.1rem',
+      },
       screens: {
         '2xl': '1400px',
       },
@@ -74,6 +76,10 @@ const config: Config = {
         voice: {
           '0%, 100%': { transform: 'scaleY(0.5)' },
           '50%': { transform: 'scaleY(1)' },
+        },
+        blink: {
+          '0%, 100%': { opacity: '1' },
+          '50%': { opacity: '0' },
         },
       },
       animation: {
