@@ -91,11 +91,11 @@ export default function HomePage() {
               </CardContent>
             </Card>
           </div>
-          <div className="flex gap-4 justify-center">
+          <div className="flex flex-col gap-4 items-center">
             <Button
               asChild
               size="lg"
-              className="bg-neutral-900 hover:bg-neutral-800 text-white"
+              className="bg-neutral-900 hover:bg-neutral-800 text-white transition-transform hover:scale-105"
             >
               <Link href="/login">
                 Sign Up for&nbsp;<span className="font-bold">Free</span>
@@ -105,7 +105,7 @@ export default function HomePage() {
               asChild
               size="lg"
               variant="outline"
-              className="border-2 border-neutral-900"
+              className="border-2 border-neutral-900 transition-transform hover:scale-105"
             >
               <Link href="/about">Learn More</Link>
             </Button>
