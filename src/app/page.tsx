@@ -46,7 +46,7 @@ export default function HomePage() {
             <h1 className="text-6xl font-bold text-neutral-900 mb-6 relative">
               Enough doomscrolling 😵
             </h1>
-            <p className="text-xl text-neutral-700 max-w-2xl mx-auto">
+            <p className="text-xl text-neutral-800 max-w-2xl mx-auto">
               Transform your social media into audio. Use your free time for
               more important things.
             </p>
