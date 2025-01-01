@@ -68,8 +68,8 @@ export default function HomePage() {
                 </CardTitle>
               </CardHeader>
               <CardContent className="text-neutral-600">
-                Choose what you want to hear. Filter by topics, people, or
-                platforms. Your feed, your rules.
+                Choose what you want to hear and when you want to hear it.
+                Filter by topics and people.
               </CardContent>
             </Card>
             <Card className="border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1),8px_8px_0px_0px_rgba(0,0,0,0.2),12px_12px_0px_0px_rgba(0,0,0,0.1)] transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1),12px_12px_0px_0px_rgba(0,0,0,0.2),16px_16px_0px_0px_rgba(0,0,0,0.1)] animate-fade-in-up [animation-delay:400ms]">
@@ -77,8 +77,8 @@ export default function HomePage() {
                 <CardTitle className="text-lg text-center">Discover</CardTitle>
               </CardHeader>
               <CardContent className="text-neutral-600">
-                See what others are listening to. Find new voices and
-                perspectives through the community's streams.
+                Find out what others are listening to. Find new voices and
+                perspectives through the community.
               </CardContent>
             </Card>
             <Card className="border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1),8px_8px_0px_0px_rgba(0,0,0,0.2),12px_12px_0px_0px_rgba(0,0,0,0.1)] transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1),12px_12px_0px_0px_rgba(0,0,0,0.2),16px_16px_0px_0px_rgba(0,0,0,0.1)] animate-fade-in-up [animation-delay:600ms]">
