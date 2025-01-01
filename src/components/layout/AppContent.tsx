@@ -2,37 +2,47 @@
 
 import { useUser } from '@clerk/nextjs';
 import { Header } from './Header';
-import { useEffect, useState } from 'react';
+import { usePathname, useRouter } from 'next/navigation';
 
 export function AppContent({ children }: { children: React.ReactNode }) {
   const { isLoaded, isSignedIn } = useUser();
-  const [showContent, setShowContent] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
 
-  useEffect(() => {
-    if (isLoaded) {
-      setShowContent(true);
-    }
-
-    // Fallback timeout in case auth state gets stuck
-    const timeout = setTimeout(() => {
-      setShowContent(true);
-    }, 3000);
-
-    return () => clearTimeout(timeout);
-  }, [isLoaded]);
-
-  return (
-    <>
-      <Header />
-      <main className="pt-16">
-        {!showContent ? (
+  // Handle redirect if needed
+  if (isLoaded && isSignedIn && pathname === '/') {
+    router.replace('/feed');
+    return (
+      <>
+        <Header />
+        <main className="pt-16">
           <div className="flex items-center justify-center min-h-[calc(100vh-4rem)]">
             <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-neutral-900" />
           </div>
-        ) : (
-          children
-        )}
-      </main>
+        </main>
+      </>
+    );
+  }
+
+  // Show loading state only during initial auth check
+  if (!isLoaded) {
+    return (
+      <>
+        <Header />
+        <main className="pt-16">
+          <div className="flex items-center justify-center min-h-[calc(100vh-4rem)]">
+            <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-neutral-900" />
+          </div>
+        </main>
+      </>
+    );
+  }
+
+  // Show content once loaded
+  return (
+    <>
+      <Header />
+      <main className="pt-16">{children}</main>
     </>
   );
 }

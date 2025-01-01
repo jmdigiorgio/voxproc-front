@@ -1,39 +1,10 @@
 'use client';
 
-import { useUser } from '@clerk/nextjs';
-import { useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 
 export default function HomePage() {
-  const { isLoaded, isSignedIn } = useUser();
-  const router = useRouter();
-  const [shouldRedirect, setShouldRedirect] = useState(false);
-
-  useEffect(() => {
-    let mounted = true;
-
-    if (isLoaded && isSignedIn && mounted) {
-      setShouldRedirect(true);
-      router.replace('/feed');
-    }
-
-    return () => {
-      mounted = false;
-    };
-  }, [isLoaded, isSignedIn, router]);
-
-  // Reset redirect state when component unmounts
-  useEffect(() => {
-    return () => setShouldRedirect(false);
-  }, []);
-
-  if (shouldRedirect) {
-    return null;
-  }
-
   return (
     <div className="flex flex-col items-center px-4 font-mono">
       <div className="pt-6 pb-12 text-center">
