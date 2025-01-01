@@ -17,6 +17,10 @@ export default function HomePage() {
     }
   }, [isLoaded, isSignedIn, router]);
 
+  if (!isLoaded) {
+    return null;
+  }
+
   if (isLoaded && !isSignedIn) {
     return (
       <div className="flex flex-col items-center px-4 font-mono">
