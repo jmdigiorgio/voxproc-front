@@ -23,49 +23,68 @@ export default function HomePage() {
         <div className="pt-6 pb-12 text-center">
           <div className="mb-24">
             <h1 className="text-6xl font-bold text-neutral-900 mb-6">
-              Enough doomscrolling.
+              Enough doomscrolling 😵
             </h1>
             <p className="text-xl text-neutral-600 max-w-2xl mx-auto">
               Transform your social media into audio. Use your free time for
               more important things.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-24">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto mb-24">
             <Card className="border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1),8px_8px_0px_0px_rgba(0,0,0,0.2),12px_12px_0px_0px_rgba(0,0,0,0.1)]">
               <CardHeader>
-                <CardTitle className="text-lg">Audio Enhancement</CardTitle>
+                <CardTitle className="text-lg">Inform</CardTitle>
               </CardHeader>
               <CardContent className="text-neutral-600">
-                Professional-grade noise reduction, EQ optimization, and clarity
-                enhancement for crystal-clear audio.
+                Your social feed converted into a seamless audio stream. Like a
+                radio station, but it's stuff you care about.
               </CardContent>
             </Card>
             <Card className="border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1),8px_8px_0px_0px_rgba(0,0,0,0.2),12px_12px_0px_0px_rgba(0,0,0,0.1)]">
               <CardHeader>
-                <CardTitle className="text-lg">Quick Editing</CardTitle>
+                <CardTitle className="text-lg">Personalize</CardTitle>
               </CardHeader>
               <CardContent className="text-neutral-600">
-                Trim, split, and combine audio segments with precision. Perfect
-                your content in minutes, not hours.
+                Choose what you want to hear. Filter by topics, people, or
+                platforms. Your feed, your rules.
               </CardContent>
             </Card>
             <Card className="border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1),8px_8px_0px_0px_rgba(0,0,0,0.2),12px_12px_0px_0px_rgba(0,0,0,0.1)]">
               <CardHeader>
-                <CardTitle className="text-lg">One-Click Publishing</CardTitle>
+                <CardTitle className="text-lg">Discover</CardTitle>
               </CardHeader>
               <CardContent className="text-neutral-600">
-                Seamlessly share your enhanced audio across all major social
-                platforms with a single click.
+                See what others are listening to. Find new voices and
+                perspectives through the community's streams.
+              </CardContent>
+            </Card>
+            <Card className="border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1),8px_8px_0px_0px_rgba(0,0,0,0.2),12px_12px_0px_0px_rgba(0,0,0,0.1)]">
+              <CardHeader>
+                <CardTitle className="text-lg">Be Free</CardTitle>
+              </CardHeader>
+              <CardContent className="text-neutral-600">
+                Keep up with your feed without the constant urge to check your
+                phone. Free yourself from the scroll.
               </CardContent>
             </Card>
           </div>
-          <div>
+          <div className="flex gap-4 justify-center">
             <Button
               asChild
               size="lg"
               className="bg-neutral-900 hover:bg-neutral-800 text-white"
             >
-              <Link href="/login">Get Started</Link>
+              <Link href="/login">
+                Sign Up for&nbsp;<span className="font-bold">Free</span>
+              </Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-2 border-neutral-900"
+            >
+              <Link href="/about">Learn More</Link>
             </Button>
           </div>
         </div>
