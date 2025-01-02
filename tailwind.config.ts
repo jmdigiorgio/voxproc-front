@@ -58,9 +58,9 @@ const config: Config = {
       animation: {
         'fade-in': 'fade-in 0.5s ease-out',
         'fade-in-up': 'fade-in-up 0.5s ease-out',
-        'wave-1': 'wave 10s ease-in-out infinite',
-        'wave-2': 'wave 12s ease-in-out infinite',
-        'wave-3': 'wave 14s ease-in-out infinite',
+        'wave-1': 'wave-1 1.5s ease-in-out infinite',
+        'wave-2': 'wave-2 2.25s ease-in-out infinite',
+        'wave-3': 'wave-3 2s ease-in-out infinite',
         blink: 'blink 1s steps(1) infinite',
       },
       keyframes: {
@@ -72,9 +72,17 @@ const config: Config = {
           '0%': { opacity: '0', transform: 'translateY(10px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
-        wave: {
-          '0%, 100%': { transform: 'scaleY(0.5)' },
-          '50%': { transform: 'scaleY(1.5)' },
+        'wave-1': {
+          '0%, 100%': { transform: 'scaleY(0.2)' },
+          '50%': { transform: 'scaleY(0.8)' },
+        },
+        'wave-2': {
+          '0%, 100%': { transform: 'scaleY(0.3)' },
+          '50%': { transform: 'scaleY(0.6)' },
+        },
+        'wave-3': {
+          '0%, 100%': { transform: 'scaleY(0.1)' },
+          '50%': { transform: 'scaleY(0.5)' },
         },
         blink: {
           '0%, 100%': { opacity: '1' },
