@@ -15,8 +15,7 @@ export default function BlogPage() {
       <div className="max-w-4xl mx-auto">
         <h1 className="text-4xl font-bold text-neutral-900 mb-2">Blog</h1>
         <p className="text-neutral-600 mb-12">
-          Insights on social media, productivity, and the future of content
-          consumption.
+          Updates on voxproc and the future of social media.
         </p>
 
         <div className="space-y-8">

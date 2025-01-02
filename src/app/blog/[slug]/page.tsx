@@ -4,6 +4,7 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { blogPosts } from '@/content/blog/posts';
+import { ShareButtons } from '@/components/blog/ShareButtons';
 
 export default function BlogPost() {
   const params = useParams();
@@ -22,6 +23,9 @@ export default function BlogPost() {
       </div>
     );
   }
+
+  // Get the current URL for sharing
+  const url = typeof window !== 'undefined' ? window.location.href : '';
 
   return (
     <div className="container mx-auto px-4 py-8 font-mono">
@@ -50,6 +54,7 @@ export default function BlogPost() {
             className="prose prose-neutral max-w-none"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
+          <ShareButtons post={post} url={url} />
         </article>
       </div>
     </div>
