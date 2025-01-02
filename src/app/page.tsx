@@ -45,7 +45,7 @@ export default function HomePage() {
             </CardHeader>
             <CardContent className="text-neutral-600">
               Your social feed converted into a seamless audio stream. Like a
-              radio station, but it's stuff you care about.
+              radio station, but it&apos;s stuff you care about.
             </CardContent>
           </Card>
           <Card className="border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1),8px_8px_0px_0px_rgba(0,0,0,0.2),12px_12px_0px_0px_rgba(0,0,0,0.1)] transition-all duration-300 ease-out hover:-translate-y-2 hover:shadow-[4px_4px_0px_0px_rgba(0,0,0,1),12px_12px_0px_0px_rgba(0,0,0,0.2),16px_16px_0px_0px_rgba(0,0,0,0.1)] animate-fade-in-up [animation-delay:200ms]">

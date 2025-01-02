@@ -1,14 +1,9 @@
 import React from 'react';
-import {
-  ChevronUpIcon,
-  ChevronDownIcon,
-  Cog6ToothIcon,
-  XMarkIcon,
-} from '@heroicons/react/24/outline';
+import { Cog6ToothIcon, XMarkIcon } from '@heroicons/react/24/outline';
 import HeaderWireframe from './HeaderWireframe';
 import FooterWireframe from './FooterWireframe';
 
-const FeedWireframe = ({ children }: { children?: React.ReactNode }) => {
+const FeedWireframe = () => {
   return (
     <div className="min-h-screen bg-zinc-950 flex flex-col font-mono">
       <HeaderWireframe />

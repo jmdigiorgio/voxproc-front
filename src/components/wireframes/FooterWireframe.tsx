@@ -7,7 +7,6 @@ import {
   PlayIcon,
   StopIcon,
   SpeakerWaveIcon as VolumeIcon,
-  Cog6ToothIcon,
 } from '@heroicons/react/24/outline';
 
 const FooterWireframe = () => {

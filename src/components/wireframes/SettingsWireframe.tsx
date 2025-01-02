@@ -4,7 +4,7 @@ import FooterWireframe from './FooterWireframe';
 
 type SettingsTab = 'account' | 'notification' | 'stream' | 'community';
 
-const SettingsWireframe = ({ children }: { children?: React.ReactNode }) => {
+const SettingsWireframe = () => {
   const [activeTab, setActiveTab] = useState<SettingsTab>('account');
   const [isEditingUsername, setIsEditingUsername] = useState(false);
   const [username, setUsername] = useState('@currentuser');

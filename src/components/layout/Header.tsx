@@ -13,11 +13,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 
-interface HeaderProps {
-  className?: string;
-}
-
-export function Header({ className = '' }: HeaderProps) {
+export function Header() {
   const { isSignedIn } = useUser();
   const { signOut } = useClerk();
   const router = useRouter();

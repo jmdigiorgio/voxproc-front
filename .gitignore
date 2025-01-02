@@ -13,12 +13,13 @@
 # testing
 /coverage
 
-# next.js
+# build outputs
 /.next/
 /out/
-
-# production
 /build
+/.swc/
+*.tsbuildinfo
+next-env.d.ts
 
 # misc
 .DS_Store
@@ -30,12 +31,15 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
+# env files
 .env*
+!.env.example
 
 # vercel
 .vercel
 
-# typescript
-*.tsbuildinfo
-next-env.d.ts
+# IDE
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
