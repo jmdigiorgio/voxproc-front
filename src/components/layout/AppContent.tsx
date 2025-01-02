@@ -3,29 +3,21 @@
 import { useUser } from '@clerk/nextjs';
 import { Header } from './Header';
 import { usePathname, useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 
 export function AppContent({ children }: { children: React.ReactNode }) {
   const { isLoaded, isSignedIn } = useUser();
   const router = useRouter();
   const pathname = usePathname();
 
-  // Handle redirect if needed
-  if (isLoaded && isSignedIn && pathname === '/') {
-    router.replace('/feed');
-    return (
-      <>
-        <Header />
-        <main className="pt-16">
-          <div className="flex items-center justify-center min-h-[calc(100vh-4rem)]">
-            <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-neutral-900" />
-          </div>
-        </main>
-      </>
-    );
-  }
+  useEffect(() => {
+    if (isLoaded && isSignedIn && pathname === '/') {
+      router.replace('/feed');
+    }
+  }, [isLoaded, isSignedIn, pathname, router]);
 
-  // Show loading state only during initial auth check
-  if (!isLoaded) {
+  // Show loading state during initial auth check or redirect
+  if (!isLoaded || (isLoaded && isSignedIn && pathname === '/')) {
     return (
       <>
         <Header />
