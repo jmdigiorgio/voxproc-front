@@ -92,7 +92,7 @@ export default function HomePage() {
             variant="outline"
             className="border-2 border-neutral-900 transition-transform hover:scale-105"
           >
-            <Link href="/about">Learn More</Link>
+            <Link href="/blog">Learn More</Link>
           </Button>
         </div>
       </div>
