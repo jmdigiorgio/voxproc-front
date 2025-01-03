@@ -15,7 +15,7 @@ export function AudioPlayer({}: AudioPlayerProps) {
 
         {/* Progress bar */}
         <div className="flex-1 mx-4 text-center text-neutral-900 font-mono">
-          persistent audio player
+          Audio Player
         </div>
 
         {/* Volume and additional controls */}

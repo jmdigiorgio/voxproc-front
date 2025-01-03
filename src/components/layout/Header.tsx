@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { useClerk, useUser } from '@clerk/nextjs';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -17,6 +17,7 @@ export function Header() {
   const { isSignedIn } = useUser();
   const { signOut } = useClerk();
   const router = useRouter();
+  const pathname = usePathname();
 
   const handleSignOut = async () => {
     await signOut();
@@ -32,7 +33,9 @@ export function Header() {
   };
 
   return (
-    <header className="flex items-center justify-between w-full h-16 bg-white px-8">
+    <header
+      className={`flex items-center w-full h-16 bg-white px-8 relative ${pathname === '/feed' ? 'border-b border-neutral-900' : ''}`}
+    >
       <Button variant="ghost" asChild className="p-0">
         <Link
           href="/"
@@ -42,7 +45,20 @@ export function Header() {
           voxproc<span className="animate-[blink_1s_steps(1)_infinite]">_</span>
         </Link>
       </Button>
-      <div className="flex items-center gap-2">
+      <div className="absolute left-1/2 -translate-x-1/2">
+        <Button variant="ghost" asChild>
+          <Link
+            href="/blog"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ fontSize: '18px', lineHeight: '24px' }}
+            className="text-neutral-900 font-mono"
+          >
+            Blog
+          </Link>
+        </Button>
+      </div>
+      <div className="flex items-center gap-2 ml-auto">
         {isSignedIn && (
           <Button variant="ghost" size="icon" className="text-neutral-900">
             <svg

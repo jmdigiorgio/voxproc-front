@@ -2,6 +2,7 @@
 
 import { useUser } from '@clerk/nextjs';
 import { Header } from './Header';
+import { DevHeader } from './DevHeader';
 import { AudioPlayer } from './AudioPlayer';
 import { usePathname, useRouter } from 'next/navigation';
 import { useEffect } from 'react';
@@ -22,8 +23,9 @@ export function AppContent({ children }: { children: React.ReactNode }) {
     return (
       <>
         <Header />
-        <main className="pt-16">
-          <div className="flex items-center justify-center min-h-[calc(100vh-4rem)]">
+        <DevHeader />
+        <main className="pt-28">
+          <div className="flex items-center justify-center min-h-[calc(100vh-7rem)]">
             <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-neutral-900" />
           </div>
         </main>
@@ -37,7 +39,10 @@ export function AppContent({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Header />
-      <main className="pt-16 pb-16">{children}</main>
+      {pathname === '/feed' && <DevHeader />}
+      <main className={pathname === '/feed' ? 'pb-16' : 'pt-16 pb-16'}>
+        {children}
+      </main>
       {shouldShowAudioPlayer && <AudioPlayer />}
     </>
   );

@@ -1,5 +1,9 @@
 import { auth } from '@clerk/nextjs/server';
 import { redirect } from 'next/navigation';
+import { Queue } from '@/components/layout/Queue';
+import { Streams } from '@/components/layout/Streams';
+import { ContentViewer } from '@/components/layout/ContentViewer';
+import { CommunityFeed } from '@/components/layout/CommunityFeed';
 
 export default async function FeedPage() {
   const session = await auth();
@@ -9,13 +13,13 @@ export default async function FeedPage() {
   }
 
   return (
-    <div className="container mx-auto px-4 py-8 font-mono">
-      <h1 className="text-4xl font-bold text-neutral-900 mb-4">
-        Under Construction!
-      </h1>
-      <p className="text-neutral-600">
-        This is where logged in users land. Lots of good stuff planned.
-      </p>
+    <div className="flex min-h-[calc(100vh-7rem-10rem)]">
+      <Queue />
+      <div className="w-1/2 flex flex-col">
+        <ContentViewer />
+        <CommunityFeed />
+      </div>
+      <Streams />
     </div>
   );
 }
