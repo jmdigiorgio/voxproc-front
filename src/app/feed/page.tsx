@@ -13,9 +13,9 @@ export default async function FeedPage() {
   }
 
   return (
-    <div className="flex min-h-[calc(100vh-7rem-10rem)]">
+    <div className="flex h-[calc(100vh-5.5rem-10rem)]">
       <Queue />
-      <div className="w-1/2 flex flex-col">
+      <div className="w-1/2 flex flex-col h-full">
         <ContentViewer />
         <CommunityFeed />
       </div>

@@ -40,7 +40,7 @@ export function AppContent({ children }: { children: React.ReactNode }) {
     <>
       <Header />
       {pathname === '/feed' && <DevHeader />}
-      <main className={pathname === '/feed' ? 'pb-16' : 'pt-16 pb-16'}>
+      <main className={pathname === '/feed' ? '' : 'pt-16 pb-16'}>
         {children}
       </main>
       {shouldShowAudioPlayer && <AudioPlayer />}

@@ -34,7 +34,7 @@ export function Header() {
 
   return (
     <header
-      className={`flex items-center w-full h-16 bg-white px-8 relative ${pathname === '/feed' ? 'border-b border-neutral-900' : ''}`}
+      className={`flex items-center w-full h-16 bg-white px-8 relative ${pathname === '/feed' ? 'border-2 border-neutral-900' : ''}`}
     >
       <Button variant="ghost" asChild className="p-0">
         <Link
