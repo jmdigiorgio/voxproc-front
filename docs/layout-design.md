@@ -1,7 +1,7 @@
 # voxproc Layout Design
 
 - The app will support light and dark themes.
-- The app uses a monospace font family for a technical, terminal-inspired aesthetic.
+- The app uses the system monospace font (`font-mono` in Tailwind) for a technical, terminal-inspired aesthetic. This is implemented via Tailwind's built-in monospace font stack which provides good cross-platform compatibility.
 
 ---
 
