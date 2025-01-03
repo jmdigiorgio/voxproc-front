@@ -27,17 +27,18 @@ export function AppContent({ children }: { children: React.ReactNode }) {
             <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-neutral-900" />
           </div>
         </main>
-        <AudioPlayer />
       </>
     );
   }
+
+  const shouldShowAudioPlayer = isSignedIn && !pathname.startsWith('/blog');
 
   // Show content once loaded
   return (
     <>
       <Header />
       <main className="pt-16 pb-16">{children}</main>
-      <AudioPlayer />
+      {shouldShowAudioPlayer && <AudioPlayer />}
     </>
   );
 }
