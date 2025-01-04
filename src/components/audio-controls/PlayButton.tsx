@@ -1,12 +1,19 @@
-import React, { useState, useRef } from 'react';
-import { PlayIcon } from '@heroicons/react/24/solid';
+import React, { RefObject } from 'react';
 import { SpeakerWaveIcon } from '@heroicons/react/24/outline';
 
-export function PlayButton() {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const notificationRef = useRef<HTMLAudioElement>(null);
-  const audioPostRef = useRef<HTMLAudioElement>(null);
+interface PlayButtonProps {
+  isPlaying: boolean;
+  setIsPlaying: (playing: boolean) => void;
+  notificationRef: RefObject<HTMLAudioElement | null>;
+  audioPostRef: RefObject<HTMLAudioElement | null>;
+}
 
+export function PlayButton({
+  isPlaying,
+  setIsPlaying,
+  notificationRef,
+  audioPostRef,
+}: PlayButtonProps) {
   const handleClick = async () => {
     if (notificationRef.current && audioPostRef.current) {
       setIsPlaying(true);
@@ -27,15 +34,16 @@ export function PlayButton() {
   };
 
   return (
-    <>
+    <div className="relative">
+      {isPlaying && (
+        <div className="absolute inset-0 border border-neutral-900 rounded-lg animate-pulse-border pointer-events-none" />
+      )}
       <button
         onClick={handleClick}
         className="w-16 h-16 flex items-center justify-center hover:bg-accent hover:text-accent-foreground transition-colors focus:outline-none focus:ring-0 focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0"
       >
         <SpeakerWaveIcon className="w-8 h-8 text-neutral-900" />
       </button>
-      <audio ref={notificationRef} src="/audio/sample-notification.mp3" />
-      <audio ref={audioPostRef} src="/audio/sample-audio-post.mp3" />
-    </>
+    </div>
   );
 }

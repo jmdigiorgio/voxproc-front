@@ -61,6 +61,7 @@ const config: Config = {
         'wave-1': 'wave-1 1.5s ease-in-out infinite',
         'wave-2': 'wave-2 2.25s ease-in-out infinite',
         'wave-3': 'wave-3 2s ease-in-out infinite',
+        'pulse-border': 'pulse-border 2s ease-in-out infinite',
         blink: 'blink 1s steps(1) infinite',
         marquee: 'marquee 15s linear infinite',
       },
@@ -84,6 +85,10 @@ const config: Config = {
         'wave-3': {
           '0%, 100%': { transform: 'scaleY(0.1)' },
           '50%': { transform: 'scaleY(0.5)' },
+        },
+        'pulse-border': {
+          '0%, 100%': { transform: 'scale(1)', opacity: '0.3' },
+          '50%': { transform: 'scale(1.05)', opacity: '1' },
         },
         blink: {
           '0%, 100%': { opacity: '1' },
