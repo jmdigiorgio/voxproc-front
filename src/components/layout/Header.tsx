@@ -45,7 +45,9 @@ export function Header() {
           voxproc<span className="animate-[blink_1s_steps(1)_infinite]">_</span>
         </Link>
       </Button>
-      <div className="absolute left-1/2 -translate-x-1/2">
+
+      {/* Desktop Navigation */}
+      <div className="hidden sm:block absolute left-1/2 -translate-x-1/2">
         <Button variant="ghost" asChild>
           <Link
             href="/blog"
@@ -58,9 +60,65 @@ export function Header() {
           </Link>
         </Button>
       </div>
+
       <div className="flex items-center gap-2 ml-auto">
+        {/* Mobile Navigation */}
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild className="sm:hidden">
+            <Button variant="ghost" size="icon" className="text-neutral-900">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-5 h-5"
+              >
+                <line x1="4" x2="20" y1="12" y2="12" />
+                <line x1="4" x2="20" y1="6" y2="6" />
+                <line x1="4" x2="20" y1="18" y2="18" />
+              </svg>
+            </Button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="end" className="w-48">
+            <DropdownMenuItem asChild className="font-mono">
+              <Link href="/blog" target="_blank" rel="noopener noreferrer">
+                Blog
+              </Link>
+            </DropdownMenuItem>
+            <DropdownMenuSeparator />
+            {isSignedIn ? (
+              <>
+                <DropdownMenuItem
+                  onClick={handleSettings}
+                  className="font-mono"
+                >
+                  Settings
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={handleSignOut}
+                  className="font-mono text-red-600"
+                >
+                  Sign Out
+                </DropdownMenuItem>
+              </>
+            ) : (
+              <DropdownMenuItem onClick={handleSignIn} className="font-mono">
+                Sign In
+              </DropdownMenuItem>
+            )}
+          </DropdownMenuContent>
+        </DropdownMenu>
+
+        {/* Desktop User Menu */}
         {isSignedIn && (
-          <Button variant="ghost" size="icon" className="text-neutral-900">
+          <Button
+            variant="ghost"
+            size="icon"
+            className="text-neutral-900 hidden sm:flex"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -77,7 +135,7 @@ export function Header() {
           </Button>
         )}
         <DropdownMenu>
-          <DropdownMenuTrigger asChild>
+          <DropdownMenuTrigger asChild className="hidden sm:flex">
             <Button variant="ghost" size="icon" className="text-neutral-900">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

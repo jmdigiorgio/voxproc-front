@@ -62,6 +62,7 @@ const config: Config = {
         'wave-2': 'wave-2 2.25s ease-in-out infinite',
         'wave-3': 'wave-3 2s ease-in-out infinite',
         blink: 'blink 1s steps(1) infinite',
+        marquee: 'marquee 15s linear infinite',
       },
       keyframes: {
         'fade-in': {
@@ -87,6 +88,10 @@ const config: Config = {
         blink: {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0' },
+        },
+        marquee: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(-100%)' },
         },
       },
     },
