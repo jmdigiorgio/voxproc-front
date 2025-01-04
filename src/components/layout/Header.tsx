@@ -36,7 +36,11 @@ export function Header() {
     <header
       className={`flex items-center w-full h-16 bg-white px-8 relative ${pathname === '/feed' ? 'border-2 border-neutral-900' : ''}`}
     >
-      <Button variant="ghost" asChild className="p-0">
+      <Button
+        variant="ghost"
+        asChild
+        className="p-0 focus:outline-none focus:ring-0 focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0"
+      >
         <Link
           href="/"
           style={{ fontSize: '24px', lineHeight: '24px' }}
@@ -48,7 +52,11 @@ export function Header() {
 
       {/* Desktop Navigation */}
       <div className="hidden sm:block absolute left-1/2 -translate-x-1/2">
-        <Button variant="ghost" asChild>
+        <Button
+          variant="ghost"
+          asChild
+          className="focus:outline-none focus:ring-0 focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0"
+        >
           <Link
             href="/blog"
             target="_blank"
@@ -65,7 +73,11 @@ export function Header() {
         {/* Mobile Navigation */}
         <DropdownMenu>
           <DropdownMenuTrigger asChild className="sm:hidden">
-            <Button variant="ghost" size="icon" className="text-neutral-900">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="text-neutral-900 focus:outline-none focus:ring-0 focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -117,7 +129,7 @@ export function Header() {
           <Button
             variant="ghost"
             size="icon"
-            className="text-neutral-900 hidden sm:flex"
+            className="text-neutral-900 hidden sm:flex focus:outline-none focus:ring-0 focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -136,7 +148,11 @@ export function Header() {
         )}
         <DropdownMenu>
           <DropdownMenuTrigger asChild className="hidden sm:flex">
-            <Button variant="ghost" size="icon" className="text-neutral-900">
+            <Button
+              variant="ghost"
+              size="icon"
+              className="text-neutral-900 focus:outline-none focus:ring-0 focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
