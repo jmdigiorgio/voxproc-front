@@ -1,9 +1,9 @@
-@startuml -voxproc-system-context
+@startuml voxproc-system-context
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
 
 LAYOUT_WITH_LEGEND()
 
-title voxproc System Context Diagram
+title VOXPROC SYSTEM CONTEXT DIAGRAM
 
 Person(end_user, "voxproc User", "A person who wants to listen to their social media content as audio")
 
@@ -13,6 +13,7 @@ System_Ext(bluesky, "BlueSky", "Social media platform using the AT Protocol")
 System_Ext(auth_provider, "Clerk", "Handles user authentication and authorization")
 System_Ext(tts_provider, "Eleven Labs", "Provides text-to-speech conversion services")
 System_Ext(supabase, "Supabase", "Provides database and real-time data synchronization services")
+System_Ext(vercel, "Vercel", "Hosts and deploys the frontend application")
 
 Rel(end_user, voxproc, "Listens to and configures content streams with", "HTTPS")
 Rel(voxproc, bluesky, "Fetches posts and social graph from", "AT Protocol")
@@ -20,5 +21,6 @@ Rel(voxproc, auth_provider, "Authenticates users with", "HTTPS")
 Rel(voxproc, tts_provider, "Converts text to speech with", "API")
 Rel(end_user, bluesky, "Has account on (optional)", "HTTPS")
 Rel(voxproc, supabase, "Stores and retrieves user data with", "PostgreSQL")
+Rel(voxproc, vercel, "Deployed and hosted on", "HTTPS")
 
 @enduml 
