@@ -14,6 +14,7 @@ System_Ext(auth_provider, "Clerk", "Handles user authentication and authorizatio
 System_Ext(tts_provider, "Eleven Labs", "Provides text-to-speech conversion services")
 System_Ext(supabase, "Supabase", "Provides database and real-time data synchronization services")
 System_Ext(vercel, "Vercel", "Hosts and deploys the frontend application")
+System_Ext(railway, "Railway", "Hosts and deploys the backend application")
 
 Rel(end_user, voxproc, "Listens to and configures content streams with", "HTTPS")
 Rel(voxproc, bluesky, "Fetches posts and social graph from", "AT Protocol")
@@ -21,6 +22,7 @@ Rel(voxproc, auth_provider, "Authenticates users with", "HTTPS")
 Rel(voxproc, tts_provider, "Converts text to speech with", "API")
 Rel(end_user, bluesky, "Has account on (optional)", "HTTPS")
 Rel(voxproc, supabase, "Stores and retrieves user data with", "PostgreSQL")
-Rel(voxproc, vercel, "Deployed and hosted on", "HTTPS")
+Rel(voxproc, vercel, "Frontend service deployed and hosted on", "HTTPS")
+Rel(voxproc, railway, "Backend services deployed and hosted on", "HTTPS")
 
 @enduml 

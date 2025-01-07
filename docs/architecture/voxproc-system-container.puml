@@ -1,0 +1,68 @@
+@startuml voxproc-system-container
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+' Layout configuration
+LAYOUT_WITH_LEGEND()
+LAYOUT_LEFT_RIGHT()
+
+title VOXPROC SYSTEM CONTAINER DIAGRAM
+
+Person(end_user, "voxproc User", "A person who wants to listen to their social media content as audio")
+
+' Frontend and Gateway
+System_Boundary(frontend_system, "Frontend") {
+    Container(web_app, "Web Application", "Next.js, React, TypeScript\nTailwind CSS, Radix UI, shadcn/ui", "Provides the user interface for content playback and configuration")
+}
+
+' Backend Services
+System_Boundary(backend_system, "Backend Services") {
+    Container(api_gateway, "API Gateway", "Next.js API Routes", "Handles API requests and routes them to appropriate services")
+    
+    ' Core Services
+    Container_Boundary(core_services, "Core Services") {
+        Container(stream_service, "Stream Service", "Node.js, TypeScript", "Manages audio streams")
+        Container(settings_service, "Settings Service", "Node.js, TypeScript", "Manages user settings")
+        Container(community_service, "Community Service", "Node.js, TypeScript", "Populates the community feed for the user")
+    }
+}
+
+' External Services - grouped by function
+System_Boundary(external_services, "External Services") {
+    ' Auth & Data
+    System_Ext(clerk, "Clerk", "Handles user authentication")
+    System_Ext(supabase, "Supabase", "Database and real-time sync")
+    
+    ' Content & Processing
+    System_Ext(bluesky, "BlueSky", "Social media platform")
+    System_Ext(elevenlabs, "Eleven Labs", "Text-to-speech service")
+    
+    ' Infrastructure
+    System_Ext(vercel, "Vercel", "Frontend hosting")
+    System_Ext(railway, "Railway", "Backend hosting")
+}
+
+' User interactions
+Rel_R(end_user, web_app, "Uses", "HTTPS")
+Rel_R(web_app, api_gateway, "Makes API calls to", "JSON/HTTPS")
+
+' Internal service relationships
+Rel_D(api_gateway, stream_service, "Routes to", "JSON/HTTP")
+Rel_D(api_gateway, settings_service, "Routes to", "JSON/HTTP")
+Rel_D(api_gateway, community_service, "Routes to", "JSON/HTTP")
+
+' External system relationships - Auth & Data
+Rel(api_gateway, clerk, "Authenticates with", "HTTPS")
+Rel(stream_service, supabase, "Fetches and stores user stream data", "PostgreSQL")
+Rel(stream_service, bluesky, "Fetches posts", "PostgreSQL")
+Rel(settings_service, supabase, "Fetches and stores user settings", "PostgreSQL")
+Rel(community_service, supabase, "Fetches and stores user activity", "PostgreSQL")
+
+' External system relationships - Content & Processing
+Rel(stream_service, elevenlabs, "Converts text to audio", "REST API")
+
+' Hosting relationships
+Lay_D(vercel, railway)
+Rel_U(web_app, vercel, "Hosted on", "HTTPS")
+Rel_D(backend_system, railway, "Hosted on", "Docker/HTTPS")
+
+@enduml

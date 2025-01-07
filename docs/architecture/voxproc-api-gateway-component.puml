@@ -1,0 +1,15 @@
+@startuml voxproc-api-gateway-component
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+LAYOUT_TOP_DOWN()
+HIDE_STEREOTYPE()
+
+title API GATEWAY COMPONENT DIAGRAM
+
+Container(web_app, "Web Application", "Next.js, React", "Frontend client")
+
+Container_Boundary(api_gateway, "API Gateway") {
+}
+
+SHOW_LEGEND()
+@enduml 
