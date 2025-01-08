@@ -1,0 +1,46 @@
+@startuml voxproc-api-gateway-component
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+LAYOUT_TOP_DOWN()
+HIDE_STEREOTYPE()
+
+title API GATEWAY COMPONENT DIAGRAM
+
+' Start with web app at bottom
+Container(web_app, "Web Application", "Next.js, React", "Frontend client")
+
+Container_Boundary(api_gateway, "API Gateway") {
+    ' Router at bottom inside gateway
+    Component(router, "Express Router", "Express.js", "Routes incoming HTTP requests")
+    
+    ' Three middleware components arranged horizontally above router
+    Component(auth_handler, "Auth Handler", "Middleware", "Validates requests via Clerk")
+    Component(request_validator, "Request Validator", "Middleware", "Validates request parameters")
+    Component(proxy_handler, "Proxy Handler", "Express.js", "Forwards requests to internal services")
+}
+
+' Core Services boundary
+Container_Boundary(core_services, "Core Services") {
+    Container(stream_service, "Stream Service", "Node.js", "Manages audio streams")
+    Container(settings_service, "Settings Service", "Node.js", "Manages user settings")
+    Container(community_service, "Community Service", "Node.js", "Populates the community feed")
+}
+
+' External systems at top
+System_Ext(clerk, "Clerk", "Authentication")
+System_Ext(railway, "Railway", "Service host")
+System_Ext(vercel, "Vercel", "Frontend host")
+
+' Relationships
+Rel_U(web_app, router, "Makes requests to", "HTTPS")
+Rel_U(router, auth_handler, "Uses")
+Rel_U(router, request_validator, "Uses")
+Rel_U(router, proxy_handler, "Uses")
+Rel_R(auth_handler, clerk, "Validates tokens with", "HTTPS")
+Rel_U(proxy_handler, core_services, "Forwards to", "Internal HTTP")
+Rel_R(api_gateway, railway, "hosted on", "")
+Rel_R(web_app, vercel, "hosted on", "")
+Rel_R(core_services, railway, "hosted on", "")
+
+SHOW_LEGEND()
+@enduml 
