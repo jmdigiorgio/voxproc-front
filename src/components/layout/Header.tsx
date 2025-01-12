@@ -67,6 +67,21 @@ export function Header() {
             Blog
           </Link>
         </Button>
+        {isSignedIn && (
+          <Button
+            variant="ghost"
+            asChild
+            className="focus:outline-none focus:ring-0 focus-visible:outline-none focus-visible:ring-0 focus-visible:ring-offset-0"
+          >
+            <Link
+              href="/streams"
+              style={{ fontSize: '18px', lineHeight: '24px' }}
+              className="text-neutral-900 font-mono"
+            >
+              Streams
+            </Link>
+          </Button>
+        )}
       </div>
 
       <div className="flex items-center gap-2 ml-auto">
@@ -100,6 +115,11 @@ export function Header() {
                 Blog
               </Link>
             </DropdownMenuItem>
+            {isSignedIn && (
+              <DropdownMenuItem asChild className="font-mono">
+                <Link href="/streams">Streams</Link>
+              </DropdownMenuItem>
+            )}
             <DropdownMenuSeparator />
             {isSignedIn ? (
               <>
