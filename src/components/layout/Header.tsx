@@ -59,8 +59,6 @@ export function Header() {
         >
           <Link
             href="/blog"
-            target="_blank"
-            rel="noopener noreferrer"
             style={{ fontSize: '18px', lineHeight: '24px' }}
             className="text-neutral-900 font-mono"
           >
@@ -111,9 +109,7 @@ export function Header() {
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end" className="w-48">
             <DropdownMenuItem asChild className="font-mono">
-              <Link href="/blog" target="_blank" rel="noopener noreferrer">
-                Blog
-              </Link>
+              <Link href="/blog">Blog</Link>
             </DropdownMenuItem>
             {isSignedIn && (
               <DropdownMenuItem asChild className="font-mono">

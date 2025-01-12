@@ -33,8 +33,6 @@ export function AppContent({ children }: { children: React.ReactNode }) {
     );
   }
 
-  const shouldShowAudioPlayer = isSignedIn && !pathname.startsWith('/blog');
-
   // Show content once loaded
   return (
     <>
@@ -43,7 +41,7 @@ export function AppContent({ children }: { children: React.ReactNode }) {
       <main className={pathname === '/feed' ? '' : 'pt-16 pb-16'}>
         {children}
       </main>
-      {shouldShowAudioPlayer && <AudioPlayer />}
+      {isSignedIn && <AudioPlayer />}
     </>
   );
 }
