@@ -1,5 +1,6 @@
 import { auth } from '@clerk/nextjs/server';
 import { redirect } from 'next/navigation';
+import { CreateStreamForm } from '@/components/streams/CreateStreamForm';
 
 export default async function StreamsPage() {
   const session = await auth();
@@ -9,8 +10,10 @@ export default async function StreamsPage() {
   }
 
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Streams</h1>
+    <div className="container mx-auto pt-8 flex justify-center">
+      <div className="w-full max-w-md">
+        <CreateStreamForm />
+      </div>
     </div>
   );
 }
