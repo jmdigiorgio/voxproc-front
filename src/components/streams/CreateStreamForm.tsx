@@ -19,10 +19,43 @@ type Account = {
   platform: string;
 };
 
+const validateBlueSkyHandle = (handle: string): string | null => {
+  // Remove @ if present at start
+  const cleanHandle = handle.startsWith('@') ? handle.slice(1) : handle;
+
+  if (!cleanHandle) return 'Account name is required';
+  if (cleanHandle.length < 3)
+    return 'Account name must be at least 3 characters';
+  if (cleanHandle.length > 20)
+    return 'Account name must be at most 20 characters';
+
+  // Check for valid characters (only alphanumeric, period, and hyphen)
+  if (!/^[a-zA-Z0-9.-]+$/.test(cleanHandle)) {
+    return 'Account name can only contain letters, numbers, periods, and hyphens';
+  }
+
+  // Check for invalid patterns
+  if (cleanHandle.includes('..') || cleanHandle.includes('--')) {
+    return 'Account name cannot contain consecutive periods or hyphens';
+  }
+
+  if (
+    cleanHandle.startsWith('.') ||
+    cleanHandle.endsWith('.') ||
+    cleanHandle.startsWith('-') ||
+    cleanHandle.endsWith('-')
+  ) {
+    return 'Account name cannot start or end with a period or hyphen';
+  }
+
+  return null;
+};
+
 export function CreateStreamForm() {
   const [streamName, setStreamName] = useState('');
   const [description, setDescription] = useState('');
   const [accountName, setAccountName] = useState('');
+  const [accountError, setAccountError] = useState<string | null>(null);
   const [platform, setPlatform] = useState('bluesky');
   const [accounts, setAccounts] = useState<Account[]>([]);
   const [tags, setTags] = useState<string[]>([]);
@@ -40,10 +73,29 @@ export function CreateStreamForm() {
   };
 
   const handleAddAccount = () => {
+    if (platform === 'bluesky') {
+      const error = validateBlueSkyHandle(accountName);
+      if (error) {
+        setAccountError(error);
+        return;
+      }
+    }
+
     if (accountName.trim()) {
       setAccounts([...accounts, { name: accountName.trim(), platform }]);
       setAccountName('');
       setPlatform('bluesky');
+      setAccountError(null);
+    }
+  };
+
+  const handleAccountNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setAccountName(e.target.value);
+    if (platform === 'bluesky') {
+      const error = validateBlueSkyHandle(e.target.value);
+      setAccountError(error);
+    } else {
+      setAccountError(null);
     }
   };
 
@@ -143,29 +195,35 @@ export function CreateStreamForm() {
                 </span>
               ))}
             </div>
-            <div className="flex gap-2">
-              <Input
-                id="accountName"
-                value={accountName}
-                onChange={e => setAccountName(e.target.value)}
-                placeholder="Enter account name"
-              />
-              <Select value={platform} onValueChange={setPlatform}>
-                <SelectTrigger className="w-[140px]">
-                  <SelectValue placeholder="Select platform" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="bluesky">BlueSky</SelectItem>
-                </SelectContent>
-              </Select>
-              <Button
-                type="button"
-                size="icon"
-                onClick={handleAddAccount}
-                disabled={!accountName.trim()}
-              >
-                <Plus size={16} />
-              </Button>
+            <div className="space-y-2">
+              <div className="flex gap-2">
+                <Input
+                  id="accountName"
+                  value={accountName}
+                  onChange={handleAccountNameChange}
+                  placeholder="Enter account name"
+                  className={accountError ? 'border-destructive' : ''}
+                />
+                <Select value={platform} onValueChange={setPlatform}>
+                  <SelectTrigger className="w-[140px]">
+                    <SelectValue placeholder="Select platform" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="bluesky">BlueSky</SelectItem>
+                  </SelectContent>
+                </Select>
+                <Button
+                  type="button"
+                  size="icon"
+                  onClick={handleAddAccount}
+                  disabled={!accountName.trim() || !!accountError}
+                >
+                  <Plus size={16} />
+                </Button>
+              </div>
+              {accountError && (
+                <p className="text-sm text-destructive">{accountError}</p>
+              )}
             </div>
           </div>
           <Button type="submit" className="w-full">
