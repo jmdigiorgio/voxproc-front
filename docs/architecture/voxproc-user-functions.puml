@@ -1,0 +1,161 @@
+@startwbs voxproc-user-functions
+
+title Voxproc User Functions Breakdown by Context
+
+legend top
+
+  |= Color/Symbol |= Name |= Description |
+  |<#LightCoral>| Context | The context of the user interface. A context may be its own page or a tab within a page. |
+  |<#LightGreen>| Function Container | Not a real function but rather a container to organize real functions under. |
+  |<#LightSkyBlue>| User Function | A real function that can be executed by the user. |
+  |<#LightPink>| Frontend System Function | A system function that occurs in the frontend in response to a user function. |
+  |🔘| Toggle Switch | User is meant to interact with the function via a toggle switch. |
+  |▼| Dropdown | User is meant to interact with the function via a dropdown menu. |
+  |►| Button Action | User is meant to interact with the function via a button action. |
+  |✎| String Input Field | User is meant to interact with the function via a string input field. |
+  |📁| File Upload Field | User is meant to interact with the function via a file upload field. |
+  |📅| Date Picker | User is meant to interact with the function via a date picker. |
+  
+endlegend
+
+*[#LightCoral] Voxproc User Interface
+
+'--------------------FEED--------------------
+**[#LightCoral] Feed
+
+'--------------------SETTINGS--------------------
+**[#LightCoral] Settings
+***[#LightSkyBlue] ► Switch between settings contexts
+'### ACCOUNT SETTINGS
+***[#LightCoral] Account Settings
+****[#LightGreen] Manage Username
+*****[#LightSkyBlue] View username
+*****[#LightSkyBlue] ✎ Change username
+******[#LightPink] Validate username
+****[#LightGreen] Manage Email
+*****[#LightSkyBlue] View email
+*****[#LightSkyBlue] ✎ Change email
+******[#LightPink] Validate email
+****[#LightGreen] Manage Bio
+*****[#LightSkyBlue] View bio
+*****[#LightSkyBlue] ✎ Change bio
+******[#LightPink] Validate bio
+****[#LightGreen] Manage Phone Number
+*****[#LightSkyBlue] View phone number
+*****[#LightSkyBlue] ✎ Change phone number
+******[#LightPink] Validate phone number
+****[#LightGreen] Manage Birthdate
+*****[#LightSkyBlue] View birthdate
+*****[#LightSkyBlue] 📅 Change birthdate
+****[#LightGreen] Manage Location
+*****[#LightSkyBlue] View location
+*****[#LightSkyBlue] ✎ Change location
+****[#LightGreen] Manage Avatar
+*****[#LightSkyBlue] View avatar
+*****[#LightSkyBlue] 📁 Change avatar
+******[#LightPink] Validate avatar
+****[#LightGreen] Manage Password
+*****[#LightSkyBlue] ✎ Create new password
+*****[#LightSkyBlue] ✎ Confirm new password
+******[#LightPink] Validate password
+****[#LightGreen] Manage Subscription
+*****[#LightSkyBlue] View subscription
+*****[#LightSkyBlue] ► Subscribe
+*****[#LightSkyBlue] ► Cancel subscription
+****[#LightGreen] Manage Account Privacy
+*****[#LightSkyBlue] 🔘 Toggle profile visibility
+******[#LightSkyBlue] 🔘 Toggle email visibility
+******[#LightSkyBlue] 🔘 Toggle phone number visibility
+******[#LightSkyBlue] 🔘 Toggle birthdate visibility
+******[#LightSkyBlue] 🔘 Toggle location visibility
+*****[#LightSkyBlue] 🔘 Toggle activity ledger visibility
+*****[#LightSkyBlue] 🔘 Toggle user follower list visibility
+*****[#LightSkyBlue] 🔘 Toggle follower permissions
+****[#LightGreen] Manage Account Deletion
+*****[#LightSkyBlue] ► Delete account
+*****[#LightSkyBlue] ► Confirm delete account
+'### NOTIFICATION SETTINGS
+***[#LightCoral] Notification Settings
+****[#LightGreen] Manage Community Notifications
+*****[#LightSkyBlue] 🔘 Toggle community notifications
+*****[#LightSkyBlue] ▼ Set notification frequency
+*****[#LightSkyBlue] 🔘 Toggle filter notification types
+******[#LightSkyBlue] 🔘 Toggle new followers
+******[#LightSkyBlue] 🔘 Toggle followed account activity
+******[#LightSkyBlue] 🔘 Toggle trending activity
+******[#LightSkyBlue] 🔘 Toggle user activity likes
+'### STREAM SETTINGS
+****[#LightGreen] Manage Stream Notifications
+*****[#LightSkyBlue] 🔘 Toggle stream notifications
+*****[#LightSkyBlue] ▼ Set notification frequency
+*****[#LightSkyBlue] 🔘 Toggle filter notification types
+******[#LightSkyBlue] 🔘 Toggle source account problems
+******[#LightSkyBlue] 🔘 Toggle platform connection issues
+******[#LightSkyBlue] 🔘 Toggle stream update notifications
+*******[#LightSkyBlue] 🔘Toggle trending public streams
+*******[#LightSkyBlue] 🔘 Toggle new streams from followed users
+*******[#LightSkyBlue] 🔘 Toggle new user stream followers
+*******[#LightSkyBlue] 🔘 Toggle source additions to followed streams
+*******[#LightSkyBlue] 🔘 Toggle when a user stream is shared
+****[#LightGreen] Manage Product Notifications
+*****[#LightSkyBlue] Set notification frequency
+*****[#LightSkyBlue] 🔘 Toggle product notifications
+******[#LightSkyBlue] 🔘 Toggle product updates
+******[#LightSkyBlue] 🔘 Toggle promotional notifications
+***[#LightCoral] Stream Settings
+****[#LightGreen] Manage Stream Identity
+*****[#LightGreen] Manage Stream Name
+******[#LightSkyBlue] View stream name
+******[#LightSkyBlue] ✎ Change stream name
+*****[#LightGreen] Manage Stream Description
+******[#LightSkyBlue] View stream description
+******[#LightSkyBlue] ✎ Change stream description
+*****[#LightGreen] Manage Stream Tags
+******[#LightSkyBlue] View stream tags
+******[#LightSkyBlue] ✎ Add stream tag
+******[#LightSkyBlue] ► Remove stream tag
+*****[#LightGreen] Manage Stream Avatar
+******[#LightSkyBlue] View stream avatar
+******[#LightSkyBlue] 📁 Change stream avatar
+****[#LightGreen] Manage Stream Sources
+*****[#LightSkyBlue] View stream sources
+*****[#LightGreen] Add stream source
+******[#LightSkyBlue] ✎ Input account name
+******[#LightSkyBlue] ▼ Input account source
+*****[#LightSkyBlue] ► Remove stream source
+****[#LightGreen] Manage Stream Personality
+*****[#LightSkyBlue] View stream personality
+*****[#LightSkyBlue] ▼ Change stream personality
+****[#LightGreen] Manage Stream Language
+*****[#LightSkyBlue] View stream language
+*****[#LightSkyBlue] ▼ Change stream language
+****[#LightGreen] Manage Stream Flow
+*****[#LightSkyBlue] View stream flow
+*****[#LightSkyBlue] ▼ Set stream interval
+****[#LightGreen] Manage Stream Sounds
+*****[#LightSkyBlue] View stream sounds
+*****[#LightSkyBlue] ▼ Change stream sounds
+****[#LightGreen] Manage Queue
+*****[#LightSkyBlue] View maximum queue size
+*****[#LightSkyBlue] ▼ Change maximum queue size
+'### COMMUNITY SETTINGS
+***[#LightCoral] Community Settings
+****[#LightSkyBlue] 🔘 Toggle community participation
+*****[#LightSkyBlue] 🔘 Toggle broadcast new user-created stream
+*****[#LightSkyBlue] 🔘 Toggle broadcast changes to user-created streams
+*****[#LightSkyBlue] 🔘 Toggle broadcast when user follows a stream
+*****[#LightSkyBlue] 🔘 Toggle broadcast when user follows another user
+*****[#LightSkyBlue] 🔘 Toggle broadcast when user likes a community post
+*****[#LightSkyBlue] 🔘 Toggle broadcast when user likes a stream
+*****[#LightSkyBlue] 🔘 Toggle broadcast what stream the user is listening to
+
+'--------------------EXPLORE--------------------
+**[#LightCoral] Explore
+
+'--------------------SIGN UP--------------------
+**[#LightCoral] Sign Up
+
+'--------------------LOGIN--------------------
+**[#LightCoral] Login
+
+@endwbs
