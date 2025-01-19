@@ -1,8 +1,6 @@
-# Voxproc Problem Statement
+# Voxproc Product Vision
 
-## Product Vision
-
-voxproc transforms how users consume social media content by converting text-based posts into an audio stream experience, enabling continuous or periodic information consumption without visual or tactile interruption of primary tasks. Think of it as "a radio station for social media" - a background audio companion for the modern professional or people who are just tired of looking at their phones all the time.
+Voxproc transforms how users consume social media content by converting text-based posts into an audio stream experience, enabling continuous or periodic information consumption without visual or tactile interruption of primary tasks. Think of it as "a radio station for social media" - a background audio companion for the modern professional or people who are just tired of looking at their phones all the time.
 
 ## Target Users
 
