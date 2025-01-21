@@ -1,0 +1,99 @@
+<svg host="65bd71144e" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="731px" height="304px" viewBox="-0.5 -0.5 731 304" content="&lt;mxfile&gt;&lt;diagram id=&quot;fo0LXWvEibTeHxtOefSd&quot; name=&quot;Page-1&quot;&gt;7VjbbuM2EP0aA+1DAl0sOXm05WxbIFkEcRZ9ZiRaYkORCkX5sl/f4UV3eetNvEAfAgSIeTjkkDyHMyPO/Cg//CFQkT3wBNOZ5ySHmb+eeZ7ruCH8U8jRIDd+YIBUkMQatcCGfMf1SItWJMFlz1ByTiUp+mDMGcOx7GFICL7vm2057XstUIpHwCZGdIz+TRKZWTR0nLbjT0zSzLq+rTtyVBtboMxQwvcdyL+b+ZHgXJpf+SHCVB1efS5m3JcTvc3CBGbynAGeGbBDtLJ7+2tZyeyBJAnFe5jGLlMe672Xe5JTxKC12nImN7bHhTaiJGXwOwbnWACww0ISOLal7ZC8ADTOCE3u0ZFXaomlRPFr3VplXJDvMC2idk7oFtIqwAt7Fhs1EmAHUIFLsHms9+0OoAd06Bneo1JaIOaUoqIkL802ciRSwlZcSp5bI3tKsB18OHnSbsMfCB/zHEtxBBM7wL+1lB8btZj2vqcgg2Ud8biBBZFVbdrM3RILPyy30zz7I55n3moWebOlE1MsXiNK9D6WYBQpYAaH7fmu2fxKSQCXJeHsATEQtzCWG4ONNAKnJDV3gr/iiFMO9mvGjWgIpQOo1g3FW3lSNWWBYsLSe22znrfIkz0qBXEYu6X6QmUgYcwU41wiiQy9ajsFJ0zqowxW8AeHGznXwSyAhUfQdts2/ClzISPOYC+IaKYxaGePlX7Ok4U3LQsrAy88TwX+/OMimE+IYMAcJZoRw1wd29x30ZbrGNLy9KxoXF+5Iy79MZf+BG8UvWD6yEsileT8tTC2Az7/i7K+JgnLsCAXovLcC33zcSaDyesMc0LshtUCDRL/1rnCAr+ZG/uE3yp1ECD1bm9Z95YFnBvudzN9m1X/V/j1pWKxZqA1+N30PgqeEzU4pFoPHFbrhWl7up8R4l2yujlTVt7HdbWYLgdqSSWNfD6LgosUBcHNO4uC8AdBxHp7gsoXsRR20LgLvb47fxGM3c2nss+gBEEUuGSgiBWvWFKOJNbs9CzV3ZyIZlVZFxq6JPmmmifKks965Oxos/jf1CO3n/XIx+qRH1P56+oR/vKP+qyGxVAU4ww+n7EYfHnPv6K8JjVYRTzBWtFOJ53om+oMPzXj+fOxsCPVsDVBqUD5M5G0sVjjMhaksAdvDdV7grHV39V8D/yph4FM9RCVfLaw2FLtlCWqA9yU2gBJ/Wn+qgyrohmDhkvNO0t1Yp5DraSoUMUSOIhplRiXos6STgauqAajTqxSztRXVN6MNiuyH156sbAP5fXabFlrrb4iprxSebZ3V8K3itcdV6VOjiomumFxaDvbgszM8jIEErKbnFWF0Ct7w9S0+pJNTBtY5lWJamYE7ehJ+34AHfkGzOzq4kvqCub0yrzuS0o3cdu4Nc4omczbmuSCyWWfEYk3EIOUu71AhY4/kGpxYqMPXFF0l5C6rkEUssyyftpqahrUFjDD8GXfxjqIwHElSrLDT9jIR6P4UCh1dnIVFnc7bELcVP66Vgcc6TTWJDGVwMbYYgyabGdnGKbAMbYIpqZ0J3wPMW8CnJxywrczWKQO8heoBt1BMTiO397kA5H78w9E0LRBvG62b46mgmtfbv27fwE=&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs>
+        <clipPath id="mx-clip-384-181-152-34-0">
+            <rect x="384" y="181" width="152" height="34"/>
+        </clipPath>
+        <clipPath id="mx-clip-384-223-152-82-0">
+            <rect x="384" y="223" width="152" height="82"/>
+        </clipPath>
+        <clipPath id="mx-clip-574-181-152-34-0">
+            <rect x="574" y="181" width="152" height="34"/>
+        </clipPath>
+    </defs>
+    <g>
+        <path d="M 380 176 L 380 150 L 540 150 L 540 176" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="all"/>
+        <path d="M 380 176 L 380 300 L 540 300 L 540 176" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 380 176 L 540 176" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-weight="bold" pointer-events="none" text-anchor="middle" font-size="12px">
+            <text x="459.5" y="167.5">
+                IAuthMiddleware
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-384-181-152-34-0)" font-size="12px">
+            <text x="385.5" y="193.5">
+                + clerkClient: Clerk
+            </text>
+            <text x="385.5" y="207.5">
+                + sessionManager: Session
+            </text>
+        </g>
+        <path d="M 380 214 L 540 214" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-384-223-152-82-0)" font-size="12px">
+            <text x="385.5" y="235.5">
+                + authenticate(
+            </text>
+            <text x="385.5" y="249.5">
+                req: Request,
+            </text>
+            <text x="385.5" y="263.5">
+                res: Response,
+            </text>
+            <text x="385.5" y="277.5">
+                next: NextFunction
+            </text>
+            <text x="385.5" y="291.5">
+                ): Promise&lt;void&gt;
+            </text>
+        </g>
+        <path d="M 570 176 L 570 150 L 730 150 L 730 176" fill="rgb(255, 255, 255)" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 570 176 L 570 218 L 730 218 L 730 176" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <path d="M 570 176 L 730 176" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" font-weight="bold" pointer-events="none" text-anchor="middle" font-size="12px">
+            <text x="649.5" y="167.5">
+                IAuthenticatedRequest
+            </text>
+        </g>
+        <g fill="rgb(0, 0, 0)" font-family="Helvetica" pointer-events="none" clip-path="url(#mx-clip-574-181-152-34-0)" font-size="12px">
+            <text x="575.5" y="193.5">
+                + user: ClerkUser
+            </text>
+            <text x="575.5" y="207.5">
+                + session: Session
+            </text>
+        </g>
+        <path d="M 570 214 L 730 214" fill="none" stroke="rgb(0, 0, 0)" stroke-miterlimit="10" pointer-events="none"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility" style="overflow: visible; text-align: left;">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe flex-start; width: 258px; height: 1px; padding-top: 7px; margin-left: 2px;">
+                        <div data-drawio-colors="color: rgb(0, 0, 0); " style="box-sizing: border-box; font-size: 0px; text-align: left;">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: none; white-space: normal; overflow-wrap: normal;">
+                                <font style="font-size: 16px">
+                                    <b>
+                                        <div style="text-align: left">
+                                            [Code] Authentication Middleware
+                                        </div>
+                                    </b>
+                                </font>
+                                <div style="text-align: left">
+                                    Code diagram showing the interfaces and types that make up the authentication middleware component, including request handling, session management, and Clerk integration.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="2" y="19" fill="rgb(0, 0, 0)" font-family="Helvetica" font-size="12px">
+                    [Code] Authentication Middleware...
+                </text>
+            </switch>
+        </g>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems" target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
+                Text is not SVG - cannot display
+            </text>
+        </a>
+    </switch>
+</svg>
